@@ -4,13 +4,29 @@ body{
     font-family: "Tajawal", sans-serif;
 
 }
+.categories
+{
+    text-align: center;
+    margin: 95px;
+    display: inline-block;
+    width: 300px;
+
+    img{
+        max-width: 100%;
+    }
+
+}
+h2{
+    text-align: center;
+}
 h1{
     text-align: center;
     color: #653bb7;
     font-weight: 700;
     font-style: normal;
 }
-#mainMenu{
+#mainMenu
+{
     border-radius: 15px;
     padding: 10px;
     background: #653bb7;
@@ -55,7 +71,6 @@ h1{
     width: 300px;
 
     img{
-
         max-width: 100%;
     }
 }
