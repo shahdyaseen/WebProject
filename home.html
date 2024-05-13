@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!--<html lang="ar" dir="rtl">-->
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
 
 
 
@@ -11,14 +13,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="logo.PNG">
+    <link rel="icon" href="icons/logo.PNG">
 
     <style>
-        h1{
-            color: #EEEEEE;
+        body{
+            color: #653bb7;
+            background: #FFFFFF;
             font-family: "Tajawal", sans-serif;
+
+        }
+        h1{
+            text-align: center;
+            color: #653bb7;
             font-weight: 700;
             font-style: normal;
+        }
+        #mainMenu{
+            border-radius: 15px;
+            padding: 10px;
+            background: #653bb7;
+            margin-top: 35px;
+            font-size: 15pt;
+            a{
+                padding:10px;
+                color: #FFFFFF;
+            }
+            a:link{
+                border-radius: 15px;
+                text-decoration: none;
+            }
+            a:visited{
+                color: #FFFFFF;
+            text-decoration: none;
+                border-radius: 15px;
+            }
+            a:hover{
+                color: #653bb7;
+                background:#FFFFFF;
+                transition:  0.7s ease-in-out;
+            }
+            a:hover::after{
+                transition-delay: 0.7s;
+            }
+
+            align-content: center;
+            text-align: center;
+            }
+        .homecontetnt{
+           /*align-content: center;*/
+            text-align: center;
+            overflow: auto;
+            white-space: nowrap;
+            /*width: fit-content;*/
+        }
+        .card{
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 300px;
+
+            img{
+
+                max-width: 100%;
+            }
+        }
+        #description{
+            text-align: center;
         }
 
     </style>
@@ -26,14 +86,71 @@
 
 
 </head>
-<body style="background: #653bb7">
+<body >
 <h1>
     مرحبا بكم في موقع حاكورة
 </h1>
+<div id="mainMenu">
+    <a href="home.html" >الواجهة الرئيسية</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="categories.html" >منتجاتنا</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="contactus.html" >تواصل معنا</a>
 
-<a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <img src="instagram.PNG" width="25px"></a>
-<a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="facebook.PNG" width="25px"></a>
-<a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <img src="whatsapp.PNG" width="25px"></a>
+</div>
+<div id="description">
+    <br>
+    وصف للصفحة او عنوان فرعي
+    <br>
+    <br>
+</div>
+<div class="homecontetnt" >
+
+    <div class="card">
+        <img src="products/p1.jpg" alt="">
+            <h3>اسم المنتج</h3>
+            <p>وصف المنتج</p>
+            <p>₪ XX.XX</p>
+    </div>
+
+    <div class="card">
+        <img src="products/p2.jpg" alt="">
+            <h3>اسم المنتج</h3>
+            <p>وصف المنتج</p>
+            <p>₪ XX.XX</p>
+    </div>
+    <div class="card">
+        <img src="products/p1.jpg" alt="">
+        <h3>اسم المنتج</h3>
+        <p>وصف المنتج</p>
+        <p>₪ XX.XX</p>
+    </div>
+
+    <div class="card">
+        <img src="products/p2.jpg" alt="">
+        <h3>اسم المنتج</h3>
+        <p>وصف المنتج</p>
+        <p>₪ XX.XX</p>
+    </div>
+    <div class="card">
+        <img src="products/p1.jpg" alt="">
+        <h3>اسم المنتج</h3>
+        <p>وصف المنتج</p>
+        <p>₪ XX.XX</p>
+    </div>
+
+    <div class="card">
+        <img src="products/p2.jpg" alt="">
+        <h3>اسم المنتج</h3>
+        <p>وصف المنتج</p>
+        <p>₪ XX.XX</p>
+    </div>
+
+</div>
+
+<div id="footercontents">
+    <a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <img src="icons/instagram2.PNG" width="25px"></a>
+    <a href="https://www.facebook.com/7akora.store1?mibextid=LQQJ4d" target="_blank"><img src="icons/facebook2.PNG" width="25px"></a>
+    <a href="https://wa.me/message/2KD7SQG2J7P6M1" target="_blank"> <img src="icons/whatsapp2.PNG" width="25px"></a>
+</div>
 
 
 </body>
