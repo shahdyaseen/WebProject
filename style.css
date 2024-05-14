@@ -6,16 +6,74 @@ body{
 }
 .categories
 {
-    text-align: center;
+    /*text-align: center;
     margin: 95px;
     display: inline-block;
     width: 300px;
+*/
 
-    img{
-        max-width: 100%;
-    }
+
 
 }
+
+.categories #cupsButton
+{
+    background-image: url("products/p4.JPG");
+    float :right;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+
+    margin-right: 150px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 0;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    text-align: right;
+    font-family: "Tajawal", sans-serif;
+    cursor: pointer;
+
+}
+
+.categories #bagsButton
+{
+    background-image: url("products/p2.JPG");
+    float :right;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+
+    margin-right: 150px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 20px solid black;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    text-align: right;
+    font-family: "Tajawal", sans-serif;
+    cursor: pointer;
+}
+
+.categories #hoodiesButton
+{
+    background-image: url("products/p5.JPG");
+    float :right;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+
+    margin-right: 150px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 0;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    text-align: right;
+    font-family: "Tajawal", sans-serif;
+    cursor: pointer;
+}
+
 h2{
     text-align: center;
 }
@@ -25,12 +83,32 @@ h1{
     font-weight: 700;
     font-style: normal;
 }
+
+
+#mainMenu h2{
+    color: #FFFFFF;
+    text-align: left ;
+    font-size: 20px;
+    margin-top: 5px;
+    display: inline;
+}
+
 #mainMenu
 {
+    img{
+        float: left;
+        max-width: 35px;
+    }
+
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    left: 0;
+
     border-radius: 15px;
     padding: 10px;
     background: #653bb7;
-    margin-top: 35px;
+   /* margin-top: 35px;*/
     font-size: 15pt;
     a{
         padding:10px;
@@ -57,7 +135,7 @@ h1{
     align-content: center;
     text-align: center;
 }
-.homecontetnt{
+.homeContent{
     /*align-content: center;*/
     text-align: center;
     overflow: auto;
@@ -74,6 +152,14 @@ h1{
         max-width: 100%;
     }
 }
+
+
 #description{
     text-align: center;
+}
+#footerContents
+{
+
+
+
 }
