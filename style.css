@@ -1,9 +1,11 @@
+
 body{
     color: #653bb7;
     background: #FFFFFF;
     font-family: "Tajawal", sans-serif;
 
 }
+
 .categories
 {
     /*text-align: center;
@@ -171,6 +173,26 @@ h1{
 
 
 }
-#footerContents h3{
+
+#footerContents h3
+{
 color: #FFFFFF;
+}
+
+#phoneNumber{
+    text-decoration: none;
+    margin-left: 200px;
+    text-align: center;
+    a{
+        padding:10px;
+        color: #FFFFFF;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a:visited{
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 15px;
+    }
 }
