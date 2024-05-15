@@ -165,7 +165,12 @@ h1{
 }
 #footerContents
 {
+    background-color: #653bb7;
+    border-radius: 15px;
+    padding: 2px;
 
-background-color: dimgray;
 
+}
+#footerContents h3{
+color: #FFFFFF;
 }
