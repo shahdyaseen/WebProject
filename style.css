@@ -125,6 +125,7 @@ h1{
     a:link{
         border-radius: 15px;
         text-decoration: none;
+        transition:  0.5s ease-in-out;
     }
     a:visited{
         color: #FFFFFF;
@@ -132,9 +133,10 @@ h1{
         border-radius: 15px;
     }
     a:hover{
-        color: #653bb7;
-        background:#FFFFFF;
-        transition:  0.7s ease-in-out;
+        /*color: #653bb7;*/
+        /*background:#FFFFFF;*/
+        text-shadow: white 0px 0px 3px;
+        transition:  0.5s ease-in-out;
     }
     a:hover::after{
         transition-delay: 0.7s;
