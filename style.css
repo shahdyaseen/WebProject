@@ -167,34 +167,42 @@ h1{
 #description{
     text-align: center;
 }
-#footerContents
+.footerContents
 {
     background-color: #653bb7;
     border-radius: 15px;
     padding: 2px;
+    max-height: 300px;
 
 
 }
 
-#footerContents h3
+
+.footerCol{
+    display: inline-block;
+    background-color: red;
+    width: 100px;
+
+    padding:0 50px  ;
+    margin-left: 60px;
+
+}
+#phoneFooter
+{
+    background-color: black;
+    width: 5px;
+}
+footer
+{
+    background-color: #653bb7;
+    color: #FFFFFF;
+    ul{
+        list-style: none;
+    }
+}
+.footerContents h3
 {
 color: #FFFFFF;
 }
 
-#phoneNumber{
-    text-decoration: none;
-    margin-left: 200px;
-    text-align: center;
-    a{
-        padding:10px;
-        color: #FFFFFF;
-    }
-    a:link{
-        text-decoration: none;
-    }
-    a:visited{
-        color: #FFFFFF;
-        text-decoration: none;
-        border-radius: 15px;
-    }
-}
+
