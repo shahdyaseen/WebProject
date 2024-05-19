@@ -74,13 +74,22 @@ body{
 */
     display: inline;
 }
-
-.categories #cupsButton
-{
+#bagsButton {
+    background-image: url("../products/p2.JPG");
+}
+#hoodiesButton{
     background-image: url("../products/p4.JPG");
+}
+#cupsButton{
+    background-image: url("../products/p5.JPG");
+}
+.categories button
+{
+
     width: 300px;
     height: 280px;
     background-size: 100%;
+    border-radius: 15px;
 
     margin-left: 150px;
     color: #653bb7;
@@ -92,7 +101,7 @@ body{
     cursor: pointer;
 
 }
-
+/*
 .categories #bagsButton
 {
     background-image: url("../products/p2.JPG");
@@ -125,7 +134,7 @@ body{
     text-align: center;
     font-family: "Tajawal", sans-serif;
     cursor: pointer;
-}
+}*/
 #textHoodiesButton{
     margin-top: 300px;
 }
@@ -165,7 +174,9 @@ h1{
     text-align: center;
     width: 300px;
 
+
     img{
+        border-radius: 15px;
         max-width: 100%;
     }
 }
@@ -190,6 +201,10 @@ footer
     color: #FFFFFF;
     ul{
         list-style: none;
+    }
+
+    a:link{
+        display: inline;
     }
 }
 
