@@ -18,7 +18,7 @@ body{
 
 .categories #cupsButton
 {
-    background-image: url("products/p4.JPG");
+    background-image: url("../products/p4.JPG");
     width: 300px;
     height: 280px;
     background-size: 100%;
@@ -36,7 +36,7 @@ body{
 
 .categories #bagsButton
 {
-    background-image: url("products/p2.JPG");
+    background-image: url("../products/p2.JPG");
     width: 300px;
     height: 280px;
     background-size: 100%;
@@ -53,7 +53,7 @@ body{
 
 .categories #hoodiesButton
 {
-    background-image: url("products/p5.JPG");
+    background-image: url("../products/p5.JPG");
     width: 300px;
     height: 280px;
     background-size: 100%;
