@@ -16,48 +16,62 @@
 
 </head>
 <body >
-<!--<h1>
-    مرحبا بكم في موقع حاكورة
-</h1>-->
-<div id="mainMenu">
 
-    <img src="../icons/logo.png">
-    <!--  <h2>حاكورة</h2>
-  -->
+<section id="headerSc">
+    <div id="mainMenu">
 
-<!--    <a href="home.html" > الرئيسية</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--    <a href="categories.html" >منتجاتنا</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--    <a href="contactus.html" >تواصل معنا</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--    <a href="aboutUs.html" > من نحن </a>-->
+    <img src="../icons/logonb.png">
 
     <ul id="menuList">
-        <a href="contactus.html"><li>تواصل معنا</li></a>
-        <a href="aboutUs.html"><li>من نحن</li></a>
-        <a href="categories.html"><li>منتجاتنا</li></a>
-        <a href="home.html"><li>الرئيسية</li></a>
+        <li><a class="" href="contactus.html">تواصل معنا</a></li>
+        <li><a class="" href="aboutUs.html">من نحن</a></li>
+        <li> <a class="" href="categories.html">منتجاتنا</a></li>
+        <li> <a class="active" href="home.html">الرئيسية</a></li>
     </ul>
 
 </div>
-<div class="description">
+</section>
+
+<section id="hero">
+    <div class="description">
     <br >
     <div class="colDescription">
 
-        <h3 lang="ar" dir="rtl">
-            اشتري راحتك!
-            <br>
-            اشعر بقوة الملابس
-        </h3>
-
-    </div>
-
-    <div class="colDescription">
-    <!--<img src="/products/p5.JPG" alt="">
--->
+        <h1 lang="ar" dir="rtl">
+            اشترِ راحتك،
+            <br><br>
+            اشعر بقوة ملابسك!
+        </h1>
+    <button class="goToShopping" id="heroButton">تسوق الآن</button>
     </div>
 
 
-</div>
-<div class="homeContent" >
+
+
+</div></section>
+
+<section id="homeCategoriesSc">
+    <div >
+        <h1 style="font-size: 35px;"> اقسام المتجر</h1>
+        <div class="categories">
+            <a href="categories.html"> <button id="hoodiesButton"><h3 >قسم الهوديز</h3></button> </a>
+        </div>
+
+        <div class="categories">
+            <a href="categories.html"> <button id="bagsButton"><h3 >قسم الاكياس</h3></button> </a>
+        </div>
+
+        <div class="categories">
+            <a href="categories.html"><button id="cupsButton" ><h3 >قسم الاكواب</h3></button></a>
+        </div>
+
+    </div>
+</section>
+
+<hr style="color: #653bb7;height: 3px; background-color: #653bb7">
+
+<section id="homeProductsSc">
+    <div class="homeContent" >
 
     <div class="card">
         <img src="/products/p1.JPG" alt="">
@@ -100,25 +114,12 @@
     </div>
 
 </div>
-<hr style="color: #653bb7">
+</section>
 
-<div >
-    <h2 > اقسام المتجر</h2>
-    <div class="categories">
-        <a href="categories.html"> <button id="hoodiesButton"><h3 >قسم الهوديز</h3></button> </a>
-    </div>
-
-    <div class="categories">
-        <a href="categories.html"> <button id="bagsButton"><h3 >قسم الاكياس</h3></button> </a>
-    </div>
-
-    <div class="categories">
-        <a href="categories.html"><button id="cupsButton" ><h3 >قسم الاكواب</h3></button></a>
-    </div>
-
-</div>
 <br>
-<footer class="footerContents">
+
+<section id="footerSc">
+    <footer class="footerContents">
 
     <!--
         <h3>تواصل معنا</h3>
@@ -141,12 +142,12 @@
         </div>
 
 
-<!--        <div id="footerPhone">-->
-<!--            <h3 dir="rtl">اتصل بنا</h3>-->
-<!--            <ul class="imgSocial">-->
-<!--                <li><a id="phoneFooter" href="tel:+972 59-280-7701"><img src="/icons/phone.PNG" width="25px">+972 59-280-7701</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
+        <!--        <div id="footerPhone">-->
+        <!--            <h3 dir="rtl">اتصل بنا</h3>-->
+        <!--            <ul class="imgSocial">-->
+        <!--                <li><a id="phoneFooter" href="tel:+972 59-280-7701"><img src="/icons/phone.PNG" width="25px">+972 59-280-7701</a></li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
         <hr>
         <div id="copyright">
 
@@ -157,6 +158,7 @@
     </div>
 
 </footer>
+</section>
 
 </body>
 </html>

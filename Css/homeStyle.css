@@ -2,30 +2,42 @@ body{
     color: #653bb7;
     background: #FFFFFF;
     font-family: "Tajawal", sans-serif;
+    width: 100%;
+    margin: 0 0 0 0;
 }
-
+/*HEADER SC*/
+#headerSc{
+    position: sticky;
+    margin-top: 0;
+    width: 100%;
+    box-shadow: 0 10px 15px darkgrey;
+    /*text-shadow: 0 5px 15px rgba(0,0,0,0.06);*/
+    font-weight: bolder;
+}
 #mainMenu h2{
     color: #FFFFFF;
+    width: 100%;
     text-align: left ;
     font-size: 20px;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     display: inline;
 }
 
 #mainMenu
 {
     img{
-        float: left;
-        max-width: 50px;
+        float: right;
+        max-height: 50px;
+        padding-right: 30px;
         justify-content: center;
     }
 
-    z-index: 100;
-    position: sticky;
+    /*z-index: 100;*/
+
     top: 0;
     left: 0;
 
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     padding: 10px;
     background: #653bb7;
     /* margin-top: 35px;*/
@@ -44,19 +56,126 @@ body{
         text-decoration: none;
         border-radius: 15px;
     }
-    a:hover{
-        /*color: #653bb7;*/
-        /*background:#FFFFFF;*/
-        text-shadow: white 0px 0px 3px;
+    a:hover, a.active{
+
+        text-shadow: #000 0px 0px 5px;
+
         transition:  0.5s ease-in-out;
     }
-    a:hover::after{
-        transition-delay: 0.7s;
-    }
+
 
     align-content: center;
     text-align: center;
+    a.active::after,a:hover::after{
+        content: "";
+        width:60%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        bottom: -4px;
+        right: 20px;
+
+    }
 }
+ul#menuList {
+    color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    float: left;
+
+    li {
+        margin-right: 50px;
+        position: relative;
+
+    }
+}
+
+
+
+/*     HERO SC     */
+
+
+.colDescription{
+    font-family: 'Amiri', serif;
+
+    padding: 30px;
+    /*border: 5px solid blue;*/
+    margin-right: 30px;
+    justify-content: center;
+    margin-top: 60px;
+    height: 200px;
+
+}
+.colDescription h1
+{
+    font-weight: 600;
+    font-size: 47px;
+    /*width: 250px;*/
+    /*text-shadow: 4px 4px 5px gray;*/
+    text-align: right;
+    color: #000;
+}
+
+.description{
+
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 500px;
+    direction: rtl;
+    /*margin: 15px 0 15px 0;*/
+    /*margin: 15px;*/
+    text-align: right;
+    /*width: 1400px;*/
+    /*height: 550px;*/
+    margin-bottom: 10px;
+    .colDescription{
+
+    }
+    /*padding: 30px;*/
+    /*border: 10px solid red;*/
+
+    background-image: url("/products/mod1blur.jpg");
+    background-repeat: no-repeat;
+    /*background-position: -1500px -1000px ;*/
+    /*background-size: 100%;*/
+    background-position: -200px -300px;
+
+    #heroButton{
+        background-color: transparent;
+        border-color: black;
+        color: black;
+        font-size: 25px;
+        border-radius: 3px;
+        transition:  0.5s ease-in-out;
+        width: 140px;
+        padding: 7px;
+    }
+    #heroButton:hover{
+        /*background-color: #653bb7;*/
+        background-color: black;
+        color: white;
+        /*border-color: #653bb7;*/
+    }
+
+
+    /*
+        img{
+            border-radius: 15px;
+            max-width: 100%;
+            height:300px ;
+            width: 300px;
+        }
+    */
+
+}
+
+
+/*        CATEGORIES SC        */
+
+
 
 .categories
 {
@@ -76,6 +195,9 @@ body{
 #cupsButton{
     background-image: url("../products/p5.JPG");
 }
+#homeCategoriesSc{
+    transition:  0.5s ease-in-out;
+}
 .categories button
 {
 
@@ -83,7 +205,6 @@ body{
     height: 280px;
     background-size: 100%;
     border-radius: 15px;
-
     margin-left: 150px;
     color: #653bb7;
     border: 0;
@@ -92,12 +213,7 @@ body{
     text-align: center;
     font-family: "Tajawal", sans-serif;
     cursor: pointer;
-}
 
-.categories h3{
-    margin-top: 300px;
-}
-.categories button{
     image{
         transition-property: transform;
         transition-duration: 0.3s;
@@ -105,24 +221,20 @@ body{
         transition-delay: 0s;
 
     }
-
-
 }
-ul#menuList {
-    color: white;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
 
-    li {
-        margin-right: 50px;
-
-    }
+.categories h3{
+    margin-top: 300px;
 }
+
+
 .categories button :hover{
     transform: translateY(-5px);
-}
 
+}
+.categories a button h3{
+    transition: 0.5s ease-in-out;
+}
 h2{
     text-align: center;
 }
@@ -132,6 +244,8 @@ h1{
     font-weight: 700;
     font-style: normal;
 }
+
+/*        HOME PRODUCTS        */
 
 
 .homeContent{
@@ -153,60 +267,18 @@ h1{
         max-width: 100%;
     }
 }
-.colDescription{
-    padding: 30px;
-    display: inline-block;
-    border: 5px solid blue;
-    margin-left: 30px;
-    height: 400px;
-
-}
-.colDescription h3
-{
-    width: 250px;
-    color: #FFFFFF;
-}
-
-.description{
-
-
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 550px;
-    direction: rtl;
-    margin: 15px 0 15px 0;
-    /*margin: 15px;*/
-    text-align: right;
-    /*width: 1400px;*/
-    /*height: 550px;*/
-    .colDescription{
-
-    }
-    /*padding: 30px;*/
-    /*border: 10px solid red;*/
-
-    background-image: url("/products/p2.JPG");
-    background-repeat: no-repeat;
-    background-position: -1500px -1000px ;
 
 
 
-/*
-    img{
-        border-radius: 15px;
-        max-width: 100%;
-        height:300px ;
-        width: 300px;
-    }
-*/
 
-}
+/*        FOOTER       */
+
+
 
 .footerContents
 {
     background-color: #653bb7;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     padding: 16px;
     max-height: 600px;
 }
@@ -233,6 +305,7 @@ footer
     }
     li{
         margin-left: 50px;
+
     }
 
     a:link{
