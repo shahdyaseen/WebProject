@@ -2,25 +2,21 @@ body{
     color: #653bb7;
     background: #FFFFFF;
     font-family: "Tajawal", sans-serif;
-
+    margin: 0 0 0 0;
 
 }
 
 #headerSc{
     position: sticky;
+    top: 0;
+    left: 0;
     margin-top: 0;
+    margin-bottom: 30px;
     width: 100%;
     box-shadow: 0 10px 15px darkgrey;
     /*text-shadow: 0 5px 15px rgba(0,0,0,0.06);*/
     font-weight: bolder;
 }
-
-
-
-
-
-
-
 #mainMenu h2{
     color: #FFFFFF;
     width: 100%;
@@ -30,8 +26,7 @@ body{
     display: inline;
 }
 
-#mainMenu
-{
+#mainMenu {
     img{
         float: right;
         max-height: 50px;
@@ -107,8 +102,6 @@ ul#menuList {
 
 
 
-
-
 /* اضافة شهد*/
 .img{
     width: 250px;
@@ -146,9 +139,7 @@ ul#menuList {
     align-items: center;
 }
 
-body {
 
-}
 
 .page-wrapper {
     /* background: #3f96cd;*/
