@@ -3,98 +3,8 @@ body {
     background: #FFFFFF;
     font-family: "Tajawal", sans-serif;
     margin: 0 0 0 0;
-    direction: rtl;
-}
-#headerSc{
     direction: ltr;
-    position: sticky;
-    margin-bottom: 30px;
-    top: 0;
-    left: 0;
-    margin-top: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 10px 15px darkgrey;
-    /*text-shadow: 0 5px 15px rgba(0,0,0,0.06);*/
-    font-weight: bolder;
 }
-#mainMenu h2{
-    color: #FFFFFF;
-    width: 100%;
-    text-align: left ;
-    font-size: 20px;
-    /*margin-top: 5px;*/
-    display: inline;
-}
-
-#mainMenu
-{
-    img{
-        float: right;
-        max-height: 50px;
-        padding-right: 30px;
-        justify-content: center;
-    }
-
-    /*z-index: 100;*/
-
-    top: 0;
-    left: 0;
-
-    /*border-radius: 15px;*/
-    padding: 10px;
-    background: #653bb7;
-    /* margin-top: 35px;*/
-    font-size: 15pt;
-    a{
-        padding:10px;
-        color: #FFFFFF;
-    }
-    a:link{
-        border-radius: 15px;
-        text-decoration: none;
-        transition:  0.5s ease-in-out;
-    }
-    a:visited{
-        color: #FFFFFF;
-        text-decoration: none;
-        border-radius: 15px;
-    }
-    a:hover, a.active{
-
-        text-shadow: #000 0px 0px 5px;
-
-        transition:  0.5s ease-in-out;
-    }
-
-
-    align-content: center;
-    text-align: center;
-    a.active::after,a:hover::after{
-        content: "";
-        width:60%;
-        height: 2px;
-        background: white;
-        position: absolute;
-        bottom: -4px;
-        right: 20px;
-
-    }
-}
-ul#menuList {
-    color: white;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    float: left;
-
-    li {
-        margin-right: 50px;
-        position: relative;
-
-    }
-}
-
 
 
 
@@ -110,10 +20,12 @@ ul#menuList {
 /*}*/
 
 #productSc{
+    direction: rtl;
     display: flex;
     justify-content: right;
     margin-right: 50px;
     align-items: center;
+
 
 }
 .product-image img {
@@ -161,6 +73,7 @@ ul#menuList {
 }
 
 .btn {
+    font-family: "Tajawal", sans-serif;
     padding: 10px 20px;
     width: 200px;
     border: none;
@@ -181,58 +94,3 @@ ul#menuList {
     color: #fff;
 }
 
-
-.footerContents
-{
-    background-color: #653bb7;
-    /*border-radius: 15px;*/
-    padding: 16px;
-    max-height: 600px;
-}
-
-footer
-{
-    margin-top: 50px;
-    hr{
-        margin-top: 20px;
-        align-content: center;
-
-    }
-
-    background-color: #653bb7;
-    color: #FFFFFF;
-    #footerSocial{
-        margin-right: 20px;
-    }
-    ul{
-
-        list-style-type: none;
-        display: flex;
-        justify-content: right;
-
-    }
-    li{
-        margin-left: 50px;
-
-    }
-
-    a:link{
-        display: inline;
-    }
-    #phoneFooter{
-        a:link:visited{
-            color: white;
-        }
-    }
-    #copyright{
-        direction: rtl;
-
-        padding-top: 6px;
-
-    }
-
-    .imgSocial :hover
-    {
-        opacity: 0.9;
-    }
-}

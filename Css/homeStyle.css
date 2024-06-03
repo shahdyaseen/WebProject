@@ -447,32 +447,3 @@ footer
     }
 }
 
-
-/*
-.footerCol{
-    display: inline-block;
-    background-color: red;
-    width: 100px;
-
-    padding:0 50px  ;
-    margin-left: 60px;
-
-}
-#phoneFooter
-{
-    background-color: black;
-    width: 5px;
-}
-footer
-{
-    background-color: #653bb7;
-    color: #FFFFFF;
-    ul{
-        list-style: none;
-    }
-}
-.footerContents h3
-{
-color: #FFFFFF;
-}
-*/
