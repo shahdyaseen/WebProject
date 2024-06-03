@@ -14,6 +14,7 @@ body{
 
 #headerSc{
     margin-bottom: 30px;
+    direction: ltr;
 }
 .btn-group{
 
@@ -29,6 +30,7 @@ body{
     display:block ;
    /* background: #464646;*/
     height: 30%;
+
 }
 
 .btn-group button {
@@ -44,6 +46,7 @@ body{
     width: 75%;
     display: flex;
     flex-direction: row;
+    transition: 0.5s ease-in-out;
 
 }
 .btn-group h3{
@@ -129,7 +132,7 @@ body{
     padding: 15px;
     /* margin: 10px ;*/
     border-radius: 15px;
-    border: solid 7px #653bb7;
+    border: solid 2px #653bb7;
 
 }
 
@@ -220,14 +223,13 @@ body{
 .info-inner .p-name,
 .info-inner .p-company {
     display: block;
+
 }
 
 .info-inner .p-name {
     font-family: "Tajawal", sans-serif;
     font-size: 20px;
     font-weight: 500;
-
-
     color: black;
 }
 
@@ -299,4 +301,62 @@ body{
     letter-spacing: 0.045em;
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+.footerContents
+{
+    background-color: #653bb7;
+    /*border-radius: 15px;*/
+    padding: 16px;
+    max-height: 600px;
+}
+
+
+
+
+footer
+{
+    margin-top: 50px;
+    hr{
+        margin-top: 20px;
+        align-content: center;
+
+    }
+
+    background-color: #653bb7;
+    color: #FFFFFF;
+    #footerSocial{
+        margin-right: 20px;
+    }
+    ul{
+
+        list-style-type: none;
+        display: flex;
+        justify-content: right;
+
+    }
+    li{
+        margin-left: 50px;
+
+    }
+
+    a:link{
+        display: inline;
+    }
+    #phoneFooter{
+        a:link:visited{
+            color: white;
+        }
+    }
+    #copyright{
+        direction: rtl;
+
+        padding-top: 6px;
+
+    }
+
+    .imgSocial :hover
+    {
+        opacity: 0.9;
+    }
 }
