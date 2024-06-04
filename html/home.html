@@ -15,7 +15,29 @@
 
 
 </head>
-<body >
+<script>
+    var i=0;
+    var time =1000;
+    const img = [];
+    img[0]='/products/p1home.JPG';
+    img[1]='/products/mod1blur.jpg';
+
+    let element = document.getElementById('description');
+
+    function changeImg(){
+        element.style.backgroundImage='url('+ img[i]+')';
+        if(i<img.length){
+            i++;
+        }
+        else{
+            i=0;
+        }
+
+        setTimeout('changeImg()',time);
+    }
+
+</script>
+<body onload="changeImg()" >
 
 <section id="headerSc">
     <div id="mainMenu">
@@ -33,22 +55,33 @@
 </section>
 
 <section id="hero">
-    <div class="description">
-    <br >
-    <div class="colDescription">
-
-        <h1 lang="ar" dir="rtl">
-            اشترِ راحتك،
+    <div class="description" id="description" onload="changeImg()">
+      <br >
+        <div class="containerImgHome">
+        <div class="buttonAndTxtImg">
+            <h1 lang="ar" dir="rtl">
+        اشترِ راحتك،
             <br><br>
-            اشعر بقوة ملابسك!
-        </h1>
-    <button class="goToShopping" id="heroButton">تسوق الآن</button>
-    </div>
+        اشعر بقوة ملابسك!
+            </h1>
+            <button class="goToShopping" >تسوق الآن</button>
+        </div>
+
+            <div class="wrapperImgHome">
+                <img src="../products/mod1nb.png">
+                <img src="../products/mod1nb.png">
+                <img src="../products/mod1nb.png">
+                <img src="../products/mod1nb.png">
+                <img src="../products/mod1nb.png">
+                <img src="../products/mod1blur.jpg">
+                <img src="../products/mod1blur.jpg">
+                <img src="../products/mod1blur.jpg">
+            </div>
 
 
+        </div>
 
-
-</div></section>
+     </div></section>
 
 <section id="homeCategoriesSc">
     <div >
@@ -77,8 +110,12 @@
 
 <section id="homeProductsSc">
     <div class="homeContent" >
-        <ul id="cardsUl">
-            <a><li class="card">
+
+            <div class="slider">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <div class="slides">
+
+                <a><li class="card">
                 <div >
                     <img src="/products/p1.JPG" alt="">
                     <h3>اسم المنتج</h3>
@@ -94,6 +131,15 @@
                     <p>₪ XX.XX</p>
                 </div>
             </li></a>
+
+                    <a><li class="card">
+                        <div >
+                            <img src="/products/p2.JPG" alt="">
+                            <h3>اسم المنتج</h3>
+                            <p>وصف المنتج</p>
+                            <p>₪ XX.XX</p>
+                        </div>
+                    </li></a>
             <a><li class="card">
                 <div>
                     <img src="/products/p3.JPG" alt="">
@@ -117,10 +163,13 @@
                     <p>وصف المنتج</p>
                     <p>₪ XX.XX</p>
                 </div>
-            </li></a>
+              </li></a>
 
 
-        </ul>
+            </div>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
 
 
 </div>
@@ -161,5 +210,45 @@
 </footer>
 </section>
 
+
+
+
+
+
+
+
+<script >
+
+    let currentIndex = 0;
+    const slidesToShow = 3; // Number of slides to show at a time
+
+    function showSlide(index) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        const maxIndex = 3;
+
+        if (index > maxIndex) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = maxIndex;
+        } else {
+            currentIndex = index;
+        }
+
+        slides.style.transform = `translateX(-${currentIndex * 100 / slidesToShow}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Initial call to display the first slide
+    showSlide(currentIndex);
+</script>
 </body>
 </html>
+
