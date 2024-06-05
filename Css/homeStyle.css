@@ -14,7 +14,7 @@ body{
     margin-top: 0;
     width: 100%;
     z-index: 100;
-    /*box-shadow: 0 10px 15px #653bb7;*/
+    box-shadow: 0 10px 15px grey;
     /*text-shadow: 0 5px 15px rgba(0,0,0,0.06);*/
     font-weight: bolder;
 }
@@ -62,7 +62,7 @@ body{
     }
     a:hover, a.active{
 
-        text-shadow: #653bb7 0px 0px 5px;
+        /*text-shadow: grey 0px 0px 5px;*/
 
         transition:  0.5s ease-in-out;
     }
@@ -360,13 +360,13 @@ ul#menuList {
     width: 300px;
 }
 #bagsButton {
-    background-image: url("../products/p2.JPG");
+    background-image: url("../products/homeProducts/homeBag.png");
 }
 #hoodiesButton{
-    background-image: url("../products/p4.JPG");
+    background-image: url("../products/homeProducts/homeCloth.png");
 }
 #cupsButton{
-    background-image: url("../products/p5.JPG");
+    background-image: url("../products/homeProducts/homeMug.png");
 }
 #homeCategoriesSc{
     transition:  0.5s ease-in-out;
@@ -434,7 +434,7 @@ ul#cardsUl {
 }
 #homeProductsSc{
     margin-right: 0;
-
+    margin-top: 20px;
     direction: rtl;
 }
 .homeContent{
@@ -468,6 +468,7 @@ ul#cardsUl {
 .slider {
 
     display: inline-block;
+    margin-top: 50px;
     padding-top: 20px ;
     position: relative;
     width: 80%;
@@ -554,7 +555,7 @@ ul#cardsUl {
 footer
 {
     hr{
-        margin-top: 20px;
+        margin: 20px;
         align-content: center;
 
     }
