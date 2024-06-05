@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Opacity Transition</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            position: relative;
+        }
+        img {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="../products/p1.JPG" name="img1" id="img1">
+    <img src="../products/p2.JPG" name="img2" id="img2">
+</div>
+
+<script>
+    var img1 = document.querySelector('img[name="img1"]');
+    var img2 = document.querySelector('img[name="img2"]');
+    var flag = 1;
+    var time = 3000; // 2 seconds
+
+    function change() {
+        if (flag === 1) {
+            img1.style.opacity = 0;
+            img2.style.opacity = 1;
+            flag = 2;
+        } else {
+            img1.style.opacity = 1;
+            img2.style.opacity = 0;
+            flag = 1;
+        }
+    }
+
+    setInterval(change, time);
+</script>
+</body>
+</html>
