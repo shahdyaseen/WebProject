@@ -303,3 +303,29 @@ body{
     text-transform: uppercase;
     white-space: nowrap;
 }
+
+.moreProductButton
+{
+    justify-content: center;
+}
+.moreProductButton button{
+    align-self: center;
+    width: 30%;
+    height: 50px;
+    background: #ffffff;
+    color: #653bb7;
+    border-radius: 15px;
+    border:  5px solid black;
+    font-size: 30px;
+    font-family: "Tajawal", sans-serif;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+}
+
+.moreProductButton button:hover {
+    font-size: 40px;
+    transform: translateY(-7px);
+
+}
