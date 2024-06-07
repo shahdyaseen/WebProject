@@ -16,25 +16,31 @@
 
 </head>
 
-<body onload="changeImg()" >
+<body onload="change()" >
 
 <section id="headerSc">
     <div id="mainMenu">
 
-    <img src="../icons/logo.png">
 
     <ul id="menuList">
-        <li><a class="" href="#footerSc"  onclick="smoothScroll(event)">تواصل معنا</a></li>
-        <li><a class="" href="aboutUs.html">قصتنا</a></li>
-        <li> <a class="" href="categories.html">منتجاتنا</a></li>
-        <li> <a class="active" href="home.html">الرئيسية</a></li>
+        <div class="liContainer">
+            <li><a class="" href="#footerSc"  onclick="smoothScroll(event)">تواصل معنا</a></li>
+            <li><a class="" href="aboutUs.html">قصتنا</a></li>
+            <li> <a class="" href="categories.html">منتجاتنا</a></li>
+            <li> <a class="active" href="home.html">الرئيسية</a></li>
+        </div>
+
+        <div class="logoContainer">
+            <img src="../icons/logo.png" >
+
+        </div>
     </ul>
 
 </div>
 </section>
 
 <section id="hero">
-    <div class="description" id="description" onload="changeImg()">
+    <div class="description" id="description"  onload="change()">
       <br >
         <div class="containerImgHome">
         <div class="buttonAndTxtImg">
@@ -46,15 +52,12 @@
             <button class="goToShopping" >تسوق الآن</button>
         </div>
 
-            <div class="wrapperImgHome">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1blur.jpg">
-                <img src="../products/mod1blur.jpg">
-                <img src="../products/mod1blur.jpg">
+            <div class="wrapperImgHome" >
+                <img src="../products/mod1nb.png" id="img1">
+                <img src="../products/homeProducts/homeBag.png" id="img2">
+                <img src="../products/p3w.JPG" id="img3">
+                <img src="../products/p4.JPG" id="img4">
+
             </div>
 
 
@@ -85,7 +88,7 @@
     </div>
 </section>
 
-<hr style="color: #653bb7;height: 2px; background-color: #653bb7">
+<!--<hr style="color: #653bb7;height: 2px; background-color: #653bb7">-->
 
 <section id="homeProductsSc">
     <div class="homeContent" >
@@ -189,6 +192,45 @@
 
 </footer>
 </section>
+
+
+<script>
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    var img3 = document.getElementById('img3');
+    var img4 = document.getElementById('img4');
+
+    var flag = 1;
+
+    function change() {
+        img1.classList.remove('active');
+        img2.classList.remove('active');
+        img3.classList.remove('active');
+        img4.classList.remove('active');
+
+        if (flag === 1) {
+            img1.classList.add('active');
+            flag = 2;
+        } else if (flag === 2) {
+            img2.classList.add('active');
+            flag = 3;
+        } else if (flag === 3) {
+            img3.classList.add('active');
+            flag = 4;
+        } else if (flag === 4) {
+            img4.classList.add('active');
+            flag = 1;
+        }
+    }
+
+    window.onload = function() {
+        img1.classList.add('active'); // Show the first image on load
+        setInterval(change, 3000); // Change image every 3 seconds
+    };
+</script>
+
+
+
 
 </body>
 </html>
