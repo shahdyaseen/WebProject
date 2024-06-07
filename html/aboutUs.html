@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="../Css/homeStyle.css">
         <link rel="icon" href="../icons/logo.png">
+        <script src="../javaScript/homeJS.js"></script>
 
 
     </head>
@@ -21,13 +22,19 @@
 <section id="headerSc">
     <div id="mainMenu">
 
-        <img src="../icons/logo.png">
 
         <ul id="menuList">
-            <li><a class="" href="#footerSc"  onclick="smoothScroll(event)">تواصل معنا</a></li>
-            <li><a class="active" href="aboutUs.html">قصتنا</a></li>
-            <li> <a class="" href="categories.html">منتجاتنا</a></li>
-            <li> <a class="" href="home.html">الرئيسية</a></li>
+            <div class="liContainer">
+                <li><a class="" href="#footerSc"  onclick="smoothScroll(event)">تواصل معنا</a></li>
+                <li><a class="" href="aboutUs.html">قصتنا</a></li>
+                <li> <a class="" href="categories.html">منتجاتنا</a></li>
+                <li> <a class="active" href="home.html">الرئيسية</a></li>
+            </div>
+
+            <div class="logoContainer">
+                <img src="../icons/logo.png" >
+
+            </div>
         </ul>
 
     </div>
@@ -38,7 +45,7 @@
 
 
 <section id="hero">
-    <div class="description" id="description" onload="changeImg()">
+    <div class="description" id="description" >
         <br >
         <div class="containerImgHome">
             <div class="buttonAndTxtImg">

@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="../Css/categoriesStyle.css">
         <link rel="stylesheet" href="../Css/homeStyle.css">
         <link rel="icon" href="../icons/logo.png">
+        <script src="../javaScript/homeJS.js"></script>
+
 
 
     </head>
@@ -22,20 +24,36 @@
 <section id="headerSc">
     <div id="mainMenu">
 
-        <img src="../icons/logo.png">
+<!--        <img src="../icons/logo.png">-->
+
 
         <ul id="menuList">
-            <li><a class="" href="#footerSc"  onclick="smoothScroll(event)">تواصل معنا</a></li>
-            <li><a class="" href="aboutUs.html">قصتنا</a></li>
-            <li> <a class="active" href="categories.html">منتجاتنا</a></li>
-            <li> <a class="" href="home.html">الرئيسية</a></li>
+            <div class="liContainer">
+                <li><a class="" href="#footerSc"  onclick="smoothScroll(event)">تواصل معنا</a></li>
+                <li><a class="" href="aboutUs.html">قصتنا</a></li>
+                <li> <a class="" href="categories.html">منتجاتنا</a></li>
+                <li> <a class="active" href="home.html">الرئيسية</a></li>
+            </div>
+
+            <div class="logoContainer">
+                <img src="../icons/logo.png" >
+<!--                <input type="text" id="searchInput" placeholder="ابحث عن المنتجات..." oninput="filterProducts()">-->
+
+
+            </div>
         </ul>
+
 
     </div>
 </section>
 
+<div class="searchContainer">
+    <input type="text" id="searchInput" placeholder="ابحث عن المنتجات..." oninput="filterProducts()">
+    <button id="shoppingCart"><img src="../icons/shoppingCart.png"></button>
+</div>
 
 <div class="containerCategories">
+
 
 
 <div class="btn-group">
@@ -218,14 +236,18 @@
 
         <!--add function to display and hide cards-->
 
-<div class="moreProductButton">
-    <button >عرض المزيد</button>
+
+
+
+    </div>
+
+
+    </div>
+
 </div>
 
-
-    </div>
-
-    </div>
+<div class="moreProductButton">
+    <button >عرض المزيد</button>
 </div>
 
 
