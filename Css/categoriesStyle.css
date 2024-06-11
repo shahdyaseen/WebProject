@@ -16,12 +16,13 @@ body{
     margin-bottom: 30px;
     direction: rtl;
 }
+
 .btn-group{
 
     border: 5px solid #653bb7;
     border-radius: 15px;
-    margin: 0 20px ;
-    padding: 20px;
+    margin: 0 10px ;
+    padding: 10px;
 
 }
 
@@ -30,7 +31,6 @@ body{
     display:block ;
    /* background: #464646;*/
     height: 30%;
-
 }
 
 .btn-group button {
@@ -40,9 +40,10 @@ body{
     border: 3px solid white;
     border-radius: 25px;
     color: white;
-    padding: 20px 24px;
+    /*padding: 20px 24px;*/
     margin: 25px;
     cursor: pointer;
+
     width: 75%;
     display: flex;
     flex-direction: row;
@@ -85,10 +86,9 @@ body{
 
 .row{
     display: flex;
-    margin: 0;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 2em 4em ;
     justify-content: center;
 
 }
@@ -129,8 +129,8 @@ body{
 }
 
 .el-wrapper {
-    width: 360px;
-    padding: 15px;
+    width: 20%;
+    padding: 3%;
     /* margin: 10px ;*/
     border-radius: 15px;
     border: solid 2px #653bb7;
@@ -302,4 +302,79 @@ body{
     letter-spacing: 0.045em;
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+.moreProductButton
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    /*background: #464646;*/
+}
+.moreProductButton button{
+    align-self: center;
+    width: 30%;
+    height: 100%;
+    background: #ffffff;
+    color: #653bb7;
+    border: none;
+    /*border:  5px solid black;*/
+    font-size: 30px;
+    font-family: "Tajawal", sans-serif;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.moreProductButton button:hover {
+    color: #464646;
+}
+
+.searchContainer{
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    padding-bottom: 10px;
+    position: sticky;
+    /*background: #464646;*/
+}
+
+
+
+#searchInput{
+    display: block;
+    direction: rtl;
+    justify-content: center;
+    position: sticky;
+
+    background-image: url('../icons/search.png'); /* رابط الصورة */
+    background-size: 20px 20px; /* حجم الصورة */
+    background-position: 10px center; /* موقع الصورة داخل الحقل */
+    background-repeat: no-repeat; /* عدم تكرار الصورة */
+    padding-left: 0; /* مسافة النص عن الحافة اليسرى */
+    border: #653bb7 solid 5px;
+    border-radius: 15px;
+    height: 30px;
+    width: 40%;
+
+
+}
+#searchInput:focus{
+    outline: none;
+}
+
+#shoppingCart{
+    float: left;
+    img{
+        width: 40px;
+        height: 40px;
+        margin-right: 5%;
+    }
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+
 }

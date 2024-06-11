@@ -12,19 +12,27 @@
     <link rel="stylesheet" href="../Css/product.css">
     <link rel="stylesheet" href="../Css/homeStyle.css">
     <link rel="icon" href="../icons/logo.png">
+    <script src="../javaScript/homeJS.js"></script>
+
 
 </head>
 <body>
 <section id="headerSc">
     <div id="mainMenu">
 
-        <img src="../icons/logo.png" alt="">
 
         <ul id="menuList">
-            <li><a class="" href="contactus.html">تواصل معنا</a></li>
-<!--            <li><a class="" href="aboutUs.html">من نحن</a></li>-->
-            <li> <a class="" href="categories.html">منتجاتنا</a></li>
-            <li> <a class="active" href="home.html">الرئيسية</a></li>
+            <div class="liContainer">
+                <li><a class="" href="#footerSc"  onclick="smoothScroll(event)">تواصل معنا</a></li>
+                <li><a class="" href="aboutUs.html">قصتنا</a></li>
+                <li> <a class="" href="categories.html">منتجاتنا</a></li>
+                <li> <a class="active" href="home.html">الرئيسية</a></li>
+            </div>
+
+            <div class="logoContainer">
+                <img src="../icons/logo.png" >
+
+            </div>
         </ul>
 
     </div>
