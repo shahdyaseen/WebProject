@@ -23,7 +23,8 @@ body {
     direction: rtl;
     display: flex;
     justify-content: right;
-    margin-right: 50px;
+    margin: 50px;
+
     align-items: center;
 
 

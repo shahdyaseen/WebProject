@@ -2,5 +2,58 @@ body{
     color: #653bb7;
     background: #FFFFFF;
     font-family: "Tajawal", sans-serif;
+    margin: 0 0 0 0;
 
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container {
+    background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+
+}
+h6{
+    text-align: center;
+    color: #7F5CC3;
+}
+
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #653bb7;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #43277A;
 }
