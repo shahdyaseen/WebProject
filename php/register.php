@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // إعداد استعلام الإدراج
-        $sql = "INSERT INTO user (username, email, password) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO user (name, email, password) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
 
         // ربط المتغيرات بالمعلمات في الاستعلام
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // تنفيذ الاستعلام
         if ($stmt->execute()) {
             $_SESSION['username'] = $username;
-            header("Location: welcome.php"); // قم بتوجيه المستخدم إلى صفحة الترحيب بعد التسجيل
+            header("Location: ../html/home.html"); // قم بتوجيه المستخدم إلى صفحة الترحيب بعد التسجيل
             exit(); // تأكد من إيقاف تشغيل النص بعد التوجيه
         } else {
             echo "خطأ: " . $stmt->error;
