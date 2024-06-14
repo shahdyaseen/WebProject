@@ -6,6 +6,21 @@ body{
     direction: rtl;
 
 }
+
+
+#cart-container {
+    margin: 20px auto;
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+
 .containerCategories{
     display: flex;
     flex-direction: row;
@@ -101,6 +116,11 @@ body{
 
 
 /* اضافة شهد*/
+.box-up button{
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+}
 .img{
     width: 250px;
     height: 250px;

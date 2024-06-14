@@ -14,37 +14,11 @@
         <link rel="stylesheet" href="../Css/homeStyle.css">
         <link rel="icon" href="../icons/logo.png">
         <script src="../javaScript/homeJS.js"></script>
-
-
+        <script src="../javaScript/categoriesButton.js"></script>
+        <script src="../javaScript/cartCategories.js"></script>
+        <script src="../javaScript/goToProductPage.js"></script>
 
     </head>
-    <script>
-        function gotoHoodies(){
-            document.getElementById("hoodies").style.display="flex";
-            document.getElementById("hoodiesActive").className="activeSec";
-            document.getElementById("mugsActive").className="noActiveSec";
-            document.getElementById("bagsActive").className="noActiveSec";
-            document.getElementById("mugs").style.display="none";
-            document.getElementById("bags").style.display="none";
-        }
-        function gotoMugs(){
-            document.getElementById("hoodies").style.display="none";
-            document.getElementById("mugs").style.display="flex";
-            document.getElementById("mugsActive").className="activeSec";
-            document.getElementById("bagsActive").className="noActiveSec";
-            document.getElementById("hoodiesActive").className="noActiveSec";
-            document.getElementById("bags").style.display="none";
-        }
-        function gotoBags(){
-            document.getElementById("hoodies").style.display="none";
-            document.getElementById("mugs").style.display="none";
-            document.getElementById("bags").style.display="flex";
-            document.getElementById("bagsActive").className="activeSec";
-            document.getElementById("mugsActive").className="noActiveSec";
-            document.getElementById("hoodiesActive").className="noActiveSec";
-
-        }
-    </script>
 </head>
 <body>
 
@@ -97,7 +71,7 @@
         <div class="row">
             <div class="el-wrapper">
                 <div class="box-up">
-                    <img class="img" src="../products/p3w.JPG" alt="">
+                  <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                     <div class="img-info">
                         <div class="info-inner">
                             <span class="p-name">هودي يومي مريح</span>
@@ -112,7 +86,7 @@
                         <div class="h-bg-inner"></div>
                     </div>
 
-                    <a class="cart" href="#">
+                    <a class="cart" href="#" onclick="addToCart(event)">
                         <span class="price">₪50</span>
                         <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -123,7 +97,7 @@
 
             <div class="el-wrapper">
                 <div class="box-up">
-                    <img class="img" src="../products/p3w.JPG" alt="">
+                    <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                     <div class="img-info">
                         <div class="info-inner">
                             <span class="p-name">هودي يومي مريح</span>
@@ -138,35 +112,7 @@
                         <div class="h-bg-inner"></div>
                     </div>
 
-                    <a class="cart" href="#">
-                        <span class="price">₪50</span>
-                        <span class="add-to-cart">
-              <span class="txt">أضف الى السلة</span>
-               </span>
-                    </a>
-                </div>
-            </div>
-
-
-
-            <div class="el-wrapper">
-                <div class="box-up">
-                    <img class="img" src="../products/p3w.JPG" alt="">
-                    <div class="img-info">
-                        <div class="info-inner">
-                            <span class="p-name">هودي يومي مريح</span>
-                            <span class="p-company">حاكورة</span>
-                        </div>
-                        <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
-                    </div>
-                </div>
-
-                <div class="box-down">
-                    <div class="h-bg">
-                        <div class="h-bg-inner"></div>
-                    </div>
-
-                    <a class="cart" href="#">
+                    <a class="cart" href="#" onclick="addToCart(event)">
                         <span class="price">₪50</span>
                         <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -179,7 +125,7 @@
 
             <div class="el-wrapper">
                 <div class="box-up">
-                    <img class="img" src="../products/p3w.JPG" alt="">
+                    <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                     <div class="img-info">
                         <div class="info-inner">
                             <span class="p-name">هودي يومي مريح</span>
@@ -194,7 +140,35 @@
                         <div class="h-bg-inner"></div>
                     </div>
 
-                    <a class="cart" href="#">
+                    <a class="cart" href="#" onclick="addToCart(event)">
+                        <span class="price">₪50</span>
+                        <span class="add-to-cart">
+              <span class="txt">أضف الى السلة</span>
+               </span>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="el-wrapper">
+                <div class="box-up">
+                    <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
+                    <div class="img-info">
+                        <div class="info-inner">
+                            <span class="p-name">هودي يومي مريح</span>
+                            <span class="p-company">حاكورة</span>
+                        </div>
+                        <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
+                    </div>
+                </div>
+
+                <div class="box-down">
+                    <div class="h-bg">
+                        <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#" onclick="addToCart(event)">
                         <span class="price">₪50</span>
                         <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -206,7 +180,7 @@
 
             <div class="el-wrapper">
                 <div class="box-up">
-                    <img class="img" src="../products/p3w.JPG" alt="">
+                    <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                     <div class="img-info">
                         <div class="info-inner">
                             <span class="p-name">هودي يومي مريح</span>
@@ -221,7 +195,7 @@
                         <div class="h-bg-inner"></div>
                     </div>
 
-                    <a class="cart" href="#">
+                    <a class="cart" href="#" onclick="addToCart(event)">
                         <span class="price">₪50</span>
                         <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -232,7 +206,7 @@
 
             <div class="el-wrapper">
                 <div class="box-up">
-                    <img class="img" src="../products/p3w.JPG" alt="">
+                    <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                     <div class="img-info">
                         <div class="info-inner">
                             <span class="p-name">هودي يومي مريح</span>
@@ -247,7 +221,7 @@
                         <div class="h-bg-inner"></div>
                     </div>
 
-                    <a class="cart" href="#">
+                    <a class="cart" href="#" onclick="addToCart(event)">
                         <span class="price">₪50</span>
                         <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -277,7 +251,7 @@
                 <div class="row">
                     <div class="el-wrapper">
                         <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                             <div class="img-info">
                                 <div class="info-inner">
                                     <span class="p-name">هودي يومي مريح</span>
@@ -292,7 +266,7 @@
                                 <div class="h-bg-inner"></div>
                             </div>
 
-                            <a class="cart" href="#">
+                            <a class="cart" href="#" onclick="addToCart(event)">
                                 <span class="price">₪50</span>
                                 <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -303,7 +277,7 @@
 
                     <div class="el-wrapper">
                         <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                             <div class="img-info">
                                 <div class="info-inner">
                                     <span class="p-name">هودي يومي مريح</span>
@@ -318,35 +292,7 @@
                                 <div class="h-bg-inner"></div>
                             </div>
 
-                            <a class="cart" href="#">
-                                <span class="price">₪50</span>
-                                <span class="add-to-cart">
-              <span class="txt">أضف الى السلة</span>
-               </span>
-                            </a>
-                        </div>
-                    </div>
-
-
-
-                    <div class="el-wrapper">
-                        <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
-                            <div class="img-info">
-                                <div class="info-inner">
-                                    <span class="p-name">هودي يومي مريح</span>
-                                    <span class="p-company">حاكورة</span>
-                                </div>
-                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
-                            </div>
-                        </div>
-
-                        <div class="box-down">
-                            <div class="h-bg">
-                                <div class="h-bg-inner"></div>
-                            </div>
-
-                            <a class="cart" href="#">
+                            <a class="cart" href="#" onclick="addToCart(event)">
                                 <span class="price">₪50</span>
                                 <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -359,7 +305,7 @@
 
                     <div class="el-wrapper">
                         <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                             <div class="img-info">
                                 <div class="info-inner">
                                     <span class="p-name">هودي يومي مريح</span>
@@ -374,7 +320,35 @@
                                 <div class="h-bg-inner"></div>
                             </div>
 
-                            <a class="cart" href="#">
+                            <a class="cart" href="#" onclick="addToCart(event)">
+                                <span class="price">₪50</span>
+                                <span class="add-to-cart">
+              <span class="txt">أضف الى السلة</span>
+               </span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="el-wrapper">
+                        <div class="box-up">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
+                            <div class="img-info">
+                                <div class="info-inner">
+                                    <span class="p-name">هودي يومي مريح</span>
+                                    <span class="p-company">حاكورة</span>
+                                </div>
+                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
+                            </div>
+                        </div>
+
+                        <div class="box-down">
+                            <div class="h-bg">
+                                <div class="h-bg-inner"></div>
+                            </div>
+
+                            <a class="cart" href="#" onclick="addToCart(event)">
                                 <span class="price">₪50</span>
                                 <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -386,7 +360,7 @@
 
                     <div class="el-wrapper">
                         <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                             <div class="img-info">
                                 <div class="info-inner">
                                     <span class="p-name">هودي يومي مريح</span>
@@ -401,7 +375,7 @@
                                 <div class="h-bg-inner"></div>
                             </div>
 
-                            <a class="cart" href="#">
+                            <a class="cart" href="#" onclick="addToCart(event)">
                                 <span class="price">₪50</span>
                                 <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -412,7 +386,7 @@
 
                     <div class="el-wrapper">
                         <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                             <div class="img-info">
                                 <div class="info-inner">
                                     <span class="p-name">هودي يومي مريح</span>
@@ -427,7 +401,7 @@
                                 <div class="h-bg-inner"></div>
                             </div>
 
-                            <a class="cart" href="#">
+                            <a class="cart" href="#" onclick="addToCart(event)">
                                 <span class="price">₪50</span>
                                 <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -457,7 +431,7 @@
                 <div class="row">
                     <div class="el-wrapper">
                         <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
                             <div class="img-info">
                                 <div class="info-inner">
                                     <span class="p-name">هودي يومي مريح</span>
@@ -472,7 +446,116 @@
                                 <div class="h-bg-inner"></div>
                             </div>
 
-                            <a class="cart" href="#">
+                            <a class="cart" href="#" onclick="addToCart(event)">
+                                <span class="price">₪50</span>
+                                <span class="add-to-cart">
+              <span class="txt">أضف الى السلة</span>
+               </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="el-wrapper">
+                        <div class="box-up">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
+                            <div class="img-info">
+                                <div class="info-inner">
+                                    <span class="p-name">هودي يومي مريح</span>
+                                    <span class="p-company">حاكورة</span>
+                                </div>
+                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
+                            </div>
+                        </div>
+
+                        <div class="box-down">
+                            <div class="h-bg">
+                                <div class="h-bg-inner"></div>
+                            </div>
+
+                            <a class="cart" href="#" onclick="addToCart(event)">
+                                <span class="price">₪50</span>
+                                <span class="add-to-cart">
+              <span class="txt">أضف الى السلة</span>
+               </span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="el-wrapper">
+                        <div class="box-up">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
+                            <div class="img-info">
+                                <div class="info-inner">
+                                    <span class="p-name">هودي يومي مريح</span>
+                                    <span class="p-company">حاكورة</span>
+                                </div>
+                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
+                            </div>
+                        </div>
+
+                        <div class="box-down">
+                            <div class="h-bg">
+                                <div class="h-bg-inner"></div>
+                            </div>
+
+                            <a class="cart" href="#" onclick="addToCart(event)">
+                                <span class="price">₪50</span>
+                                <span class="add-to-cart">
+              <span class="txt">أضف الى السلة</span>
+               </span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="el-wrapper">
+                        <div class="box-up">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
+                            <div class="img-info">
+                                <div class="info-inner">
+                                    <span class="p-name">هودي يومي مريح</span>
+                                    <span class="p-company">حاكورة</span>
+                                </div>
+                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
+                            </div>
+                        </div>
+
+                        <div class="box-down">
+                            <div class="h-bg">
+                                <div class="h-bg-inner"></div>
+                            </div>
+
+                            <a class="cart" href="#" onclick="addToCart(event)">
+                                <span class="price">₪50</span>
+                                <span class="add-to-cart">
+              <span class="txt">أضف الى السلة</span>
+               </span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="el-wrapper">
+                        <div class="box-up">
+                            <button class="buttonGoToProductPage" onclick="goToProductPage()"><img class="img" src="../products/p3w.JPG" alt=""> </button>
+                            <div class="img-info">
+                                <div class="info-inner">
+                                    <span class="p-name">هودي يومي مريح</span>
+                                    <span class="p-company">حاكورة</span>
+                                </div>
+                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
+                            </div>
+                        </div>
+
+                        <div class="box-down">
+                            <div class="h-bg">
+                                <div class="h-bg-inner"></div>
+                            </div>
+
+                            <a class="cart" href="#" onclick="addToCart(event)">
                                 <span class="price">₪50</span>
                                 <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -498,116 +581,7 @@
                                 <div class="h-bg-inner"></div>
                             </div>
 
-                            <a class="cart" href="#">
-                                <span class="price">₪50</span>
-                                <span class="add-to-cart">
-              <span class="txt">أضف الى السلة</span>
-               </span>
-                            </a>
-                        </div>
-                    </div>
-
-
-
-                    <div class="el-wrapper">
-                        <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
-                            <div class="img-info">
-                                <div class="info-inner">
-                                    <span class="p-name">هودي يومي مريح</span>
-                                    <span class="p-company">حاكورة</span>
-                                </div>
-                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
-                            </div>
-                        </div>
-
-                        <div class="box-down">
-                            <div class="h-bg">
-                                <div class="h-bg-inner"></div>
-                            </div>
-
-                            <a class="cart" href="#">
-                                <span class="price">₪50</span>
-                                <span class="add-to-cart">
-              <span class="txt">أضف الى السلة</span>
-               </span>
-                            </a>
-                        </div>
-                    </div>
-
-
-
-                    <div class="el-wrapper">
-                        <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
-                            <div class="img-info">
-                                <div class="info-inner">
-                                    <span class="p-name">هودي يومي مريح</span>
-                                    <span class="p-company">حاكورة</span>
-                                </div>
-                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
-                            </div>
-                        </div>
-
-                        <div class="box-down">
-                            <div class="h-bg">
-                                <div class="h-bg-inner"></div>
-                            </div>
-
-                            <a class="cart" href="#">
-                                <span class="price">₪50</span>
-                                <span class="add-to-cart">
-              <span class="txt">أضف الى السلة</span>
-               </span>
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="el-wrapper">
-                        <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
-                            <div class="img-info">
-                                <div class="info-inner">
-                                    <span class="p-name">هودي يومي مريح</span>
-                                    <span class="p-company">حاكورة</span>
-                                </div>
-                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
-                            </div>
-                        </div>
-
-                        <div class="box-down">
-                            <div class="h-bg">
-                                <div class="h-bg-inner"></div>
-                            </div>
-
-                            <a class="cart" href="#">
-                                <span class="price">₪50</span>
-                                <span class="add-to-cart">
-              <span class="txt">أضف الى السلة</span>
-               </span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="el-wrapper">
-                        <div class="box-up">
-                            <img class="img" src="../products/p3w.JPG" alt="">
-                            <div class="img-info">
-                                <div class="info-inner">
-                                    <span class="p-name">هودي يومي مريح</span>
-                                    <span class="p-company">حاكورة</span>
-                                </div>
-                                <div class="a-size">المقاسات المتوفرة :<span class="size">S , M , L , XL</span></div>
-                            </div>
-                        </div>
-
-                        <div class="box-down">
-                            <div class="h-bg">
-                                <div class="h-bg-inner"></div>
-                            </div>
-
-                            <a class="cart" href="#">
+                            <a class="cart" href="#" onclick="addToCart(event)">
                                 <span class="price">₪50</span>
                                 <span class="add-to-cart">
               <span class="txt">أضف الى السلة</span>
@@ -639,6 +613,14 @@
 </div>
 
 
+
+<div id="cart-container">
+    <h2>السلة</h2>
+    <ul id="cart-items"></ul>
+</div>
+
+
+<script src="cartProduct.js"></script>
 <section id="footerSc">
     <footer class="footerContents">
 
