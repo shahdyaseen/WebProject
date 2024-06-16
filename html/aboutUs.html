@@ -1,84 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7AKORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/homeStyle.css">
+    <link rel="stylesheet" href="../Css/aboutUsStyle.css">
+    <link rel="icon" href="../icons/logo.png">
 
-        <title>7AKORA</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="../Css/homeStyle.css">
-        <link rel="icon" href="../icons/logo.png">
-        <script src="../javaScript/homeJS.js"></script>
-
-
-    </head>
 </head>
+
 <body>
 
 <section id="headerSc">
     <div id="mainMenu">
-
-
         <ul id="menuList">
             <div class="liContainer">
                 <li><a class="" href="contactus.html">تواصل معنا</a></li>
                 <li><a class="active" href="aboutUs.html">قصتنا</a></li>
-                <li> <a class="" href="categories.html">منتجاتنا</a></li>
-                <li> <a class="" href="home.html">الرئيسية</a></li>
+                <li><a class="" href="categories.html">منتجاتنا</a></li>
+                <li><a class="" href="home.html">الرئيسية</a></li>
             </div>
-
             <div class="logoContainer">
-                <img src="../icons/logo.png" >
-
+                <img src="../icons/logo.png">
             </div>
         </ul>
-
     </div>
 </section>
 
+<div class="containerAboutUs">
+    <div class="textAbout">
+        <h3>وصف للمتجر</h3>
+    </div>
+    <div class="imgFlash">
+        <img src="../products/p2.JPG" name="img1" id="img1">
+        <img src="../products/p5.JPG" name="img2" id="img2" style="opacity: 0;">
+        <img src="../products/p4.JPG" name="img3" id="img3" style="opacity: 0;">
+        <img src="../products/p3.JPG" name="img4" id="img4" style="opacity: 0;">
+
+    </div>
+</div>
 
 
+<script>
+    var img1 = document.querySelector('img[name="img1"]');
+    var img2 = document.querySelector('img[name="img2"]');
+    var img3 = document.querySelector('img[name="img3"]');
+    var img4 = document.querySelector('img[name="img4"]');
+    var flag = 1;
+    var time = 3000;
+
+    function change() {
+        switch (flag) {
+            case 1:
+                img1.style.opacity = 0;
+                img2.style.opacity = 1;
+                img3.style.opacity = 0;
+                img4.style.opacity = 0;
+                flag = 2;
+                break;
 
 
-<section id="hero">
-    <div class="description" id="description" >
-        <br >
-        <div class="containerImgHome">
-            <div class="buttonAndTxtImg">
-                <h1 lang="ar" dir="rtl">
-                    اشترِ راحتك،
-                    <br><br>
-                    اشعر بقوة ملابسك!
-                </h1>
-                <button class="goToShopping" >تسوق الآن</button>
-            </div>
+            case 2:
+                img1.style.opacity = 0;
+                img2.style.opacity = 0;
+                img3.style.opacity = 1;
+                img4.style.opacity = 0;
+                flag = 3;
+                break;
 
-            <div class="wrapperImgHome">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1nb.png">
-                <img src="../products/mod1blur.jpg">
-                <img src="../products/mod1blur.jpg">
-                <img src="../products/mod1blur.jpg">
-            </div>
+            case 3:
+                img1.style.opacity = 0;
+                img2.style.opacity = 0;
+                img3.style.opacity = 0;
+                img4.style.opacity = 1;
+                flag = 4;
+                break;
 
 
-        </div>
+            case 4:
+                img1.style.opacity = 1;
+                img2.style.opacity = 0;
+                img3.style.opacity = 0;
+                img4.style.opacity = 0;
+                flag = 1;
+                break;
 
-    </div></section>
+        }
+    }
 
-
-
-
-
-
-
+    setInterval(change, time);
+</script>
 
 
 <section id="footerSc">
@@ -94,14 +109,6 @@
 
                 </ul>
             </div>
-
-
-            <!--        <div id="footerPhone">-->
-            <!--            <h3 dir="rtl">اتصل بنا</h3>-->
-            <!--            <ul class="imgSocial">-->
-            <!--                <li><a id="phoneFooter" href="tel:+972 59-280-7701"><img src="/icons/phone.PNG" width="25px">+972 59-280-7701</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
             <hr>
             <div id="copyright">
 
@@ -113,6 +120,7 @@
 
     </footer>
 </section>
+
 
 
 </body>

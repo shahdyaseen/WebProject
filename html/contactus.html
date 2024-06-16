@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-
-    <title>7AKORA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../Css/homeStyle.css">
-    <link rel="stylesheet" href="../Css/contactusStyle.css">
-    <link rel="icon" href="../icons/logo.png">
-
-
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>7AKORA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Css/homeStyle.css">
+  <link rel="stylesheet" href="../Css/contactusStyle.css">
+  <link rel="icon" href="../icons/logo.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<style>
-
-
-</style>
 <body>
 
 <section id="headerSc">
   <div id="mainMenu">
-
-    <!--        <img src="../icons/logo.png">-->
-
-
     <ul id="menuList">
       <div class="liContainer">
         <li><a class="active" href="contactus.html">تواصل معنا</a></li>
         <li><a class="" href="aboutUs.html">قصتنا</a></li>
-        <li> <a class="" href="categories.html">منتجاتنا</a></li>
-        <li> <a class="" href="home.html">الرئيسية</a></li>
+        <li><a class="" href="categories.html">منتجاتنا</a></li>
+        <li><a class="" href="home.html">الرئيسية</a></li>
       </div>
-
       <div class="logoContainer">
-        <img src="../icons/logo.png" >
-        <!--                <input type="text" id="searchInput" placeholder="ابحث عن المنتجات..." oninput="filterProducts()">-->
-
-
+        <img src="../icons/logo.png">
       </div>
     </ul>
-
-
   </div>
 </section>
+
 <section id="contact-box">
   <div class="contact-container">
-    <form action="../php/send_email.php" method="POST" class="contact-form">
+    <form id="contactForm" class="contact-form">
       <label for="name">الاسم:</label>
       <input type="text" id="name" name="name" required>
 
@@ -65,37 +47,44 @@
     <h6>او تواصل معنا على صفحات التواصل اسفل الصفحة</h6>
   </div>
 </section>
+
 <section id="footerSc">
   <footer class="footerContents">
-
     <div class="footerContainer">
       <div id="footerSocial">
         <h3 dir="rtl">تواصل معنا</h3>
         <ul class="imgSocial">
-          <li><a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <img src="../icons/instagram.PNG" width="25px"></a></li>
+          <li><a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="../icons/instagram.PNG" width="25px"></a></li>
           <li><a href="https://www.facebook.com/7akora.store1?mibextid=LQQJ4d" target="_blank"><img src="../icons/facebook.PNG" width="25px"></a></li>
-          <li><a href="https://wa.me/message/2KD7SQG2J7P6M1" target="_blank"> <img src="../icons/whatsapp.PNG" width="25px"></a></li>
-
+          <li><a href="https://wa.me/message/2KD7SQG2J7P6M1" target="_blank"><img src="../icons/whatsapp.PNG" width="25px"></a></li>
         </ul>
       </div>
-
-
-      <!--         <div id="footerPhone">-->
-      <!--            <h3 dir="rtl">اتصل بنا</h3>-->
-      <!--            <ul class="imgSocial">-->
-      <!--                <li><a id="phoneFooter" href="tel:+972 59-280-7701"><img src="/icons/phone.PNG" width="25px">+972 59-280-7701</a></li>-->
-      <!--            </ul>-->
-      <!--        </div>-->
       <hr>
       <div id="copyright">
-
         حَاكُورَة ٢٠٢٤ ©
-
       </div>
-
     </div>
-
   </footer>
 </section>
+
+<script>
+  $(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault(); // منع الانتقال إلى صفحة جديدة
+      $.ajax({
+        type: 'POST',
+        url: '../php/send_email.php', // مسار ملف PHP
+        data: $(this).serialize(),
+        success: function(response) {
+          alert(response); // عرض استجابة السيرفر كتنبيه
+        },
+        error: function() {
+          alert('حدث خطأ أثناء محاولة إرسال البريد الإلكتروني.');
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

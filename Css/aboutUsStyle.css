@@ -1,6 +1,44 @@
+
 body{
     color: #653bb7;
     background: #FFFFFF;
     font-family: "Tajawal", sans-serif;
 
 }
+
+.containerAboutUs{
+    background: #653bb7;
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+    width: 100%;
+
+}
+
+
+.textAbout{
+    background: #653bb7;
+    color: #ffffff;
+    font-size: 40px;
+    font-family: "Tajawal", sans-serif;
+    width: 50%;
+    h3{
+        padding: 0 10%;
+    }
+
+}
+
+.imgFlash{
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+    background: #653bb7;
+    img{
+        width: 50%;
+        height: 85vh;
+        position: absolute;
+        transition: opacity 0.5s ease-in-out;
+    }
+}
+
