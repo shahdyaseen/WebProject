@@ -1,31 +1,88 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+    <title>7AKORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/homeStyle.css">
+    <link rel="stylesheet" href="../Css/cart.css">
+    <link rel="icon" href="../icons/logo.png">
+    <script src="../javaScript/homeJS.js"></script>
+
+
+</head>
+
 <?php
 $date=date("Y-m-d");
 session_start();
 $myname=$_SESSION['user'];
-echo "Welcome $myname ";
-echo "<a href='usserPanelHoodie.php'>back to panel</a><hr>";
+//echo "<a href='../htmlUser/home.html'>الرجوع</a><hr>";
 ?>
+<body>
+<section id="headerSc">
+    <div id="mainMenu">
 
 
-<html>
-<form method="post" action="cart.php">
-    <select name="dlocation" onchange="this.form.submit()">
+        <ul id="menuList">
+            <div class="liContainer">
+                <li><a class="" href="../htmlUser/contactus.html">تواصل معنا</a></li>
+                <li><a class="" href="../htmlUser/aboutUs.html">قصتنا</a></li>
+                <li> <a class="" href="../htmlUser/categories.html">منتجاتنا</a></li>
+                <li> <a class="active" href="../htmlUser/home.html">الرئيسية</a></li>
+            </div>
+
+            <div class="logoContainer">
+                <img src="../icons/logo.png" >
+
+            </div>
+        </ul>
+
+    </div>
+</section>
+
+
+<form class="containerOrder" method="post" action="../phpMotasem/cart.php">
+   <div class="rowContainer">
+       <div class="inputInformation">
+       <select  class="locationSelect" name="dlocation" onchange="this.form.submit()">
         <?php
         if(isset($_POST['dlocation'])){
             $d=$_POST['dlocation'];
             echo "<option>$d</option>";
         }
         ?>
-        <option value="20">west bank(20)</option>
-        <option value="30">Jerusalem(30)</option>
-        <option value="70">Occupied Lands(70)</option>
+        <option value="20">الضفة (20)</option>
+        <option value="30">القدس (30)</option>
+        <option value="70">اراضي الداخل (70)</option>
     </select>
-<input type="text" name="location" placeholder="enter your location" required>
-    <input type="text" name="phone" placeholder="enter your phone" required>
 
-<?php
-$dlocation=$_POST['dlocation'];
+    <input type="text" class="inputText" name="location" placeholder=" الموقع " required>
+    <input type="text" class="inputText" name="phone" placeholder="رقم الهاتف " required>
 
+    <br>
+    <button class="orderButton" name="purchase">تأكيد الطلب</button>
+
+       </div>
+
+
+       <div>
+           <table class='tableCart'>
+
+               <tr>
+                   <th class='imgTable'><h5>صورة المنتج</h5> </th>
+                   <th class='productNameTable'><h5>اسم المنتج</h5> </th>
+                   <th class='priceTable'><h5>السعر</h5> </th>
+                   <th> </th>
+
+               </tr>
+
+
+    <?php
+    $dlocation = isset($_POST['dlocation']) ? $_POST['dlocation'] : '0';
 
 $c=mysqli_connect("localhost","root","","7akora");
 $q2="select UID from users where username='$myname';";
@@ -43,44 +100,64 @@ while($a3=mysqli_fetch_assoc($x3)){
 }
 
 //var_dump($data);
-echo "<table>";
+//echo "<table class='tableCart'>
+//
+//  <tr>
+//        <th class='imgTable'> صورة المنتج</th>
+//        <th class='productNameTable'> اسم المنتج</th>
+//        <th class='priceTable'> السعر</th>
+//        <th> </th>
+//
+//    </tr>
+//";
 $sum=0;
 
 foreach ($data as $cart){
+    if (!empty($cart['CID'])) {
+        $CID = $cart['CID'];
 
-   $CID=$cart['CID'];
-   $PID=$cart['PID'];
-if($PID!='') {
-    $q4 = "select * from products where PID=$PID;";
-    $x4 = mysqli_query($c, $q4);
+        if (!empty($cart['PID'])) {
+            $PID = $cart['PID'];
 
-    while ($a4 = mysqli_fetch_assoc($x4)) {
-        $pname = $a4['pname'];
+            if ($PID != '') {
+                $q4 = "select * from products where PID=$PID;";
+                $x4 = mysqli_query($c, $q4);
 
-        $price = $a4['price'];
-    }
-    if ($CID != '') {
-        echo "<tr>";
-        echo "<td><input type='submit' name='$CID' value='remove from cart'></td>";
-        if (isset($_POST[$CID])) {
-            $q5 = "delete from cart where CID=$CID;";
-            mysqli_query($c, $q5);
-            header("location:cart.php");
+                while ($a4 = mysqli_fetch_assoc($x4)) {
+                    $pname = $a4['pname'];
+                    $img=$a4['pic'];
+                    $price = $a4['price'];
+                }
+                if ($CID != '')
+                {
+                    echo "<tr>";
+
+                    echo "<td class='imgTable'><img src='$img'></td>";
+                    echo "<td class='productNameTable'>$pname</td>";
+                    echo "<td class='priceTable'>$price</td>";
+
+                    echo "<td><input class='removeFromCart' type='submit' name='$CID' value='ازالة من السلة'></td>";
+                    if (isset($_POST[$CID])) {
+                        $q5 = "delete from cart where CID=$CID;";
+                        mysqli_query($c, $q5);
+                        header("location:cart.php");
+                    }
+//                    echo "<td class='priceTable'>$price</td>";
+//                    echo "<td class='productNameTable'>$pname</td>";
+//                    echo "<td class='imgTable'><img src='$img'></td>";
+
+                    $sum += $price;
+
+                    echo "</tr>";
+                }
+            }
         }
-        echo "<td>$pname</td>";
-        echo "<td>$price</td>";
-        $sum += $price;
-
-        echo "</tr>";
-    }
 }
 }
 $sum+=$dlocation;
-echo "<tr><td colspan='3'>total= $sum</td></tr></table>";
+echo "<tr><td colspan='3'>المجموع = $sum</td></tr></table>";
 ?>
-    <br>
 
-    <button name="purchase">purchase</button>
 
 <?php
 
@@ -108,5 +185,38 @@ window.location.href='userPanelHoodie.php';
 
 }
 ?>
+           </table>
+       </div>
+   </div>
 </form>
+
+<div>
+    <section id="footerSc">
+        <footer class="footerContents">
+
+            <div class="footerContainer">
+                <div id="footerSocial">
+                    <h3 dir="rtl">تواصل معنا</h3>
+                    <ul class="imgSocial">
+                        <li><a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <img src="../icons/instagram.PNG" width="25px"></a></li>
+                        <li><a href="https://www.facebook.com/7akora.store1?mibextid=LQQJ4d" target="_blank"><img src="../icons/facebook.PNG" width="25px"></a></li>
+                        <li><a href="https://wa.me/message/2KD7SQG2J7P6M1" target="_blank"> <img src="../icons/whatsapp.PNG" width="25px"></a></li>
+
+                    </ul>
+                </div>
+                <hr>
+                <div id="copyright">
+
+                    حَاكُورَة ٢٠٢٤ ©
+
+                </div>
+
+            </div>
+
+        </footer>
+    </section>
+</div>
+
+</body>
+
 </html>

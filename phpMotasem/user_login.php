@@ -29,7 +29,7 @@ if(isset($_POST['login'])){
         $_SESSION['user']=$user;
 
 
-        header("location:../phpMotasem/userPanelHoodie.php");
+        header("location:../phpMotasem/upanel.php");
 
     }
 
