@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7AKORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/homeStyle.css">
+    <link rel="stylesheet" href="../Css/aboutUsStyle.css">
+    <link rel="icon" href="../icons/logo.png">
+</head>
+
+<body>
+
+<section id="headerSc">
+    <div id="mainMenu">
+        <ul id="menuList">
+            <div class="liContainer">
+                <li><a class="" href="contactus.html">تواصل معنا</a></li>
+                <li><a class="active" href="aboutUs.html">قصتنا</a></li>
+                <li><a class="" href="categories.html">منتجاتنا</a></li>
+                <li><a class="" href="home.html">الرئيسية</a></li>
+            </div>
+            <div class="logoContainer">
+                <img src="../icons/logo.png">
+            </div>
+        </ul>
+    </div>
+</section>
+
+<div class="containerAboutUs">
+    <div class="textAbout">
+        <h3>وصف للمتجر</h3>
+    </div>
+    <div class="imgFlash">
+        <img src="../products/p2.JPG" name="img1" id="img1">
+        <img src="../products/p5.JPG" name="img2" id="img2" style="opacity: 0;">
+        <img src="../products/p4.JPG" name="img3" id="img3" style="opacity: 0;">
+        <img src="../products/p3.JPG" name="img4" id="img4" style="opacity: 0;">
+
+    </div>
+</div>
+
+
+<script>
+    var img1 = document.querySelector('img[name="img1"]');
+    var img2 = document.querySelector('img[name="img2"]');
+    var img3 = document.querySelector('img[name="img3"]');
+    var img4 = document.querySelector('img[name="img4"]');
+    var flag = 1;
+    var time = 3000;
+
+    function change() {
+        switch (flag) {
+            case 1:
+                img1.style.opacity = 0;
+                img2.style.opacity = 1;
+                img3.style.opacity = 0;
+                img4.style.opacity = 0;
+                flag = 2;
+                break;
+
+
+            case 2:
+                img1.style.opacity = 0;
+                img2.style.opacity = 0;
+                img3.style.opacity = 1;
+                img4.style.opacity = 0;
+                flag = 3;
+                break;
+
+            case 3:
+                img1.style.opacity = 0;
+                img2.style.opacity = 0;
+                img3.style.opacity = 0;
+                img4.style.opacity = 1;
+                flag = 4;
+                break;
+
+
+            case 4:
+                img1.style.opacity = 1;
+                img2.style.opacity = 0;
+                img3.style.opacity = 0;
+                img4.style.opacity = 0;
+                flag = 1;
+                break;
+
+        }
+    }
+
+    setInterval(change, time);
+</script>
+
+
+<section id="footerSc">
+    <footer class="footerContents">
+
+        <div class="footerContainer">
+            <div id="footerSocial">
+                <h3 dir="rtl">تواصل معنا</h3>
+                <ul class="imgSocial">
+                    <li><a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <img src="../icons/instagram.PNG" width="25px"></a></li>
+                    <li><a href="https://www.facebook.com/7akora.store1?mibextid=LQQJ4d" target="_blank"><img src="../icons/facebook.PNG" width="25px"></a></li>
+                    <li><a href="https://wa.me/message/2KD7SQG2J7P6M1" target="_blank"> <img src="../icons/whatsapp.PNG" width="25px"></a></li>
+
+                </ul>
+            </div>
+            <hr>
+            <div id="copyright">
+
+                حَاكُورَة ٢٠٢٤ ©
+
+            </div>
+
+        </div>
+
+    </footer>
+</section>
+
+
+
+</body>
+</html>

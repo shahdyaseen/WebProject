@@ -130,7 +130,7 @@ class SMTP
      * How to handle debug output.
      * Options:
      * * `echo` Output plain-text as-is, appropriate for CLI
-     * * `html` Output escaped, line breaks converted to `<br>`, appropriate for browser output
+     * * `htmlUser` Output escaped, line breaks converted to `<br>`, appropriate for browser output
      * * `error_log` Output to error log as configured in php.ini
      * Alternatively, you can provide a callable expecting two params: a message string and the debug level:
      *
@@ -286,7 +286,7 @@ class SMTP
             return;
         }
         //Avoid clash with built-in function names
-        if (is_callable($this->Debugoutput) && !in_array($this->Debugoutput, ['error_log', 'html', 'echo'])) {
+        if (is_callable($this->Debugoutput) && !in_array($this->Debugoutput, ['error_log', 'htmlUser', 'echo'])) {
             call_user_func($this->Debugoutput, $str, $level);
 
             return;
@@ -297,7 +297,7 @@ class SMTP
                 /** @noinspection ForgottenDebugOutputInspection */
                 error_log($str);
                 break;
-            case 'html':
+            case 'htmlUser':
                 //Cleans up output a bit for a better looking, HTML-safe output
                 echo gmdate('Y-m-d H:i:s'), ' ', htmlentities(
                     preg_replace('/[\r\n]+/', '', $str),

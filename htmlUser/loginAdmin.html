@@ -10,21 +10,6 @@
 
 </head>
 <style>
-    /*
-#422b74
-#5d4398
-#7a5fb9
-#9c7bd4
-*/
-
-    /*
-    #653bb7 (أزرق مرجاني غامق)
-#a987e1 (بنفسجي فاتح)
-#4e4e4e (رمادي داكن)
-#ffffff (أبيض)
-#ffd700 (ذهبي)
-    */
-
     body {
         font-family: "Tajawal", sans-serif;
         background-color: #a987e1 ;
@@ -95,18 +80,47 @@
         text-decoration: underline;
     }
 
+    input[type='checkbox']{
+        cursor: pointer;
+        display: flex;
+        float: left;
+        height: 15px;
+        width: 15px;
+        background-color: #653bb7;
+        padding: 0 10px;
+        margin: 5px 10px;
+
+    }
+
+    .checkContainer{
+        display: inline-list-item;
+
+
+    }
+    .checkContainer label{
+        text-align: left;
+        margin-bottom: 20px;
+    }
 </style>
 <body>
+
 <div class="login-container">
     <h1>تسجيل الدخول</h1>
-    <form action="../php/login.php" method="post">
-        <label for="email">البريد الالكتروني </label>
-        <input type="text" id="email" name="email" required>
+    <form method="post" action="../phpMotasem/admin_login.php">
+
+        <label for="user"> اسم المستخدم </label>
+        <input type="text"  id="user" name="user1"required>
         <label for="password">كلمة المرور</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">تسجيل الدخول</button>
+        <input type="password" id="password" required name="password1" >
+
+        <div class="checkContainer">
+            <input type="checkbox" id="remember" name="remember1" checked>
+            <label for="remember">تذكرني</label>
+        </div>
+
+        <button type="submit" name="login" >تسجيل الدخول</button>
     </form>
-    <p>ليس لديك حساب؟ <a href="register.html">سجل الآن</a></p>
+
 </div>
 </body>
 </html>
