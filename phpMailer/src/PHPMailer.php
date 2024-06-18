@@ -37,7 +37,7 @@ class PHPMailer
 
     const CONTENT_TYPE_PLAINTEXT = 'text/plain';
     const CONTENT_TYPE_TEXT_CALENDAR = 'text/calendar';
-    const CONTENT_TYPE_TEXT_HTML = 'text/html';
+    const CONTENT_TYPE_TEXT_HTML = 'text/htmlUser';
     const CONTENT_TYPE_MULTIPART_ALTERNATIVE = 'multipart/alternative';
     const CONTENT_TYPE_MULTIPART_MIXED = 'multipart/mixed';
     const CONTENT_TYPE_MULTIPART_RELATED = 'multipart/related';
@@ -411,9 +411,9 @@ class PHPMailer
      * How to handle debug output.
      * Options:
      * * `echo` Output plain-text as-is, appropriate for CLI
-     * * `html` Output escaped, line breaks converted to `<br>`, appropriate for browser output
+     * * `htmlUser` Output escaped, line breaks converted to `<br>`, appropriate for browser output
      * * `error_log` Output to error log as configured in php.ini
-     * By default PHPMailer will use `echo` if run from a `cli` or `cli-server` SAPI, `html` otherwise.
+     * By default PHPMailer will use `echo` if run from a `cli` or `cli-server` SAPI, `htmlUser` otherwise.
      * Alternatively, you can provide a callable expecting two params: a message string and the debug level:
      *
      * ```php
@@ -835,7 +835,7 @@ class PHPMailer
             $this->exceptions = (bool) $exceptions;
         }
         //Pick an appropriate debug output format automatically
-        $this->Debugoutput = (strpos(PHP_SAPI, 'cli') !== false ? 'echo' : 'html');
+        $this->Debugoutput = (strpos(PHP_SAPI, 'cli') !== false ? 'echo' : 'htmlUser');
     }
 
     /**
@@ -907,7 +907,7 @@ class PHPMailer
             return;
         }
         //Avoid clash with built-in function names
-        if (is_callable($this->Debugoutput) && !in_array($this->Debugoutput, ['error_log', 'html', 'echo'])) {
+        if (is_callable($this->Debugoutput) && !in_array($this->Debugoutput, ['error_log', 'htmlUser', 'echo'])) {
             call_user_func($this->Debugoutput, $str, $this->SMTPDebug);
 
             return;
@@ -918,7 +918,7 @@ class PHPMailer
                 /** @noinspection ForgottenDebugOutputInspection */
                 error_log($str);
                 break;
-            case 'html':
+            case 'htmlUser':
                 //Cleans up output a bit for a better looking, HTML-safe output
                 echo htmlentities(
                     preg_replace('/[\r\n]+/', '', $str),
@@ -3065,7 +3065,7 @@ class PHPMailer
                 $body .= $this->attachAll('attachment', $this->boundary[1]);
                 break;
             default:
-                //Catch case 'plain' and case '', applies to simple `text/plain` and `text/html` body content types
+                //Catch case 'plain' and case '', applies to simple `text/plain` and `text/htmlUser` body content types
                 //Reset the `Encoding` property in case we changed it for line length reasons
                 $this->Encoding = $bodyEncoding;
                 $body .= $this->encodeString($this->Body, $this->Encoding);
@@ -4491,10 +4491,10 @@ class PHPMailer
      *
      * ```php
      * //Use default conversion
-     * $plain = $mail->html2text($html);
+     * $plain = $mail->html2text($htmlUser);
      * //Use your own custom converter
-     * $plain = $mail->html2text($html, function($html) {
-     *     $converter = new MyHtml2text($html);
+     * $plain = $mail->html2text($htmlUser, function($htmlUser) {
+     *     $converter = new MyHtml2text($htmlUser);
      *     return $converter->get_text();
      * });
      * ```
@@ -4615,9 +4615,9 @@ class PHPMailer
             'heics' => 'image/heic-sequence',
             'eml' => 'message/rfc822',
             'css' => 'text/css',
-            'html' => 'text/html',
-            'htm' => 'text/html',
-            'shtml' => 'text/html',
+            'htmlUser' => 'text/htmlUser',
+            'htm' => 'text/htmlUser',
+            'shtml' => 'text/htmlUser',
             'log' => 'text/plain',
             'text' => 'text/plain',
             'txt' => 'text/plain',

@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password'])) {
             // كلمة المرور صحيحة، قم بتسجيل دخول المستخدم
             $_SESSION['username'] = $row['username']; // يمكنك تغيير هذا إلى ما تريد تخزينه في الجلسة
-            header("Location: ../html/home.html"); // توجيه المستخدم إلى صفحة الترحيب
+            header("Location: ../htmlUser/home.htmlUser"); // توجيه المستخدم إلى صفحة الترحيب
             exit(); // تأكد من إيقاف تشغيل النص بعد التوجيه
         } else {
             echo "كلمة المرور غير صحيحة";

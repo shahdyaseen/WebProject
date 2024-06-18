@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7AKORA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/loginStyle.css">
+    <link rel="icon" href="../icons/logo.png">
+
+</head>
+<style>
+    body {
+        font-family: "Tajawal", sans-serif;
+        background-color: #a987e1 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .login-container {
+
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+
+    .login-container h1 {
+        margin-bottom: 20px;
+        color: #653bb7;
+    }
+
+    .login-container label {
+        display: block;
+        margin: 10px 0 5px;
+        color: #666;
+    }
+
+    .login-container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid darkblue;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .login-container button {
+        font-family: "Tajawal", sans-serif;
+        width: 100%;
+        padding: 10px;
+        background-color: #653bb7;
+        border: none;
+        border-radius: 4px;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .login-container button:hover {
+        background-color: #422b74;
+    }
+
+    .login-container p {
+        margin-top: 20px;
+        color: #422b74;
+    }
+
+    .login-container a {
+        color: #422b74;
+        text-decoration: none;
+    }
+
+    .login-container a:hover {
+        text-decoration: underline;
+    }
+
+    input[type='checkbox']{
+        cursor: pointer;
+        display: flex;
+        float: left;
+        height: 15px;
+        width: 15px;
+        background-color: #653bb7;
+        padding: 0 10px;
+        margin: 5px 10px;
+
+    }
+
+    .checkContainer{
+        display: inline-list-item;
+
+
+    }
+    .checkContainer label{
+        text-align: left;
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+
+<div class="login-container">
+    <h1>تسجيل الدخول</h1>
+
+
+<!--    <form action="../php/login.php" method="post">-->
+<!--        <label for="email">البريد الالكتروني </label>-->
+<!--        <input type="text" id="email" name="email" required>-->
+<!--        <label for="password">كلمة المرور</label>-->
+<!--        <button type="submit">تسجيل الدخول</button>-->
+<!--    </form>-->
+
+
+    <form method="post" action="../phpMotasem/user_login.php">
+        <label for="user"> اسم المستخدم </label>
+        <input type="text" id="user" name="user" required >
+
+        <label for="password">كلمة المرور</label>
+        <input type="password" id="password" required name="password" >
+
+        <div class="checkContainer">
+
+            <input type="checkbox" id="remember" name="remember" checked>
+            <label for="remember">تذكرني</label>
+        </div>
+
+
+<!--        <input type="submit" name="login" value="login">-->
+        <button type="submit" name="login" >تسجيل الدخول</button>
+
+        <p>ليس لديك حساب؟ <a href="../htmlUser/register.html">سجل الآن</a></p>
+    </form>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

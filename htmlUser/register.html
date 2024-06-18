@@ -81,6 +81,7 @@
 
     .login-container a:hover {
         text-decoration: underline;
+
     }
 
 
@@ -91,17 +92,22 @@
 
 <div class="login-container">
     <h1>انشاء حساب</h1>
-    <form action="../php/register.php" method="post">
+    <form action="../phpMotasem/signup.php" method="post">
         <label for="username">اسم المستخدم</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" required name="name" placeholder="">
 
-        <label for="email">البريد الالكتروني </label>
-        <input type="text" id="email" name="email" required>
 
         <label for="password">كلمة المرور</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit"> انشاء حساب </button>
+        <input type="password" name="pass"  id="password" required placeholder="">
+
+
+        <button type="submit" name="ok"> انشاء حساب </button>
+        <a href="loginUser.html"> او تسجيل الدخول </a>
+
+
     </form>
 </div>
+
+
 </body>
 </html>
