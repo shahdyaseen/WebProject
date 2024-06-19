@@ -16,7 +16,7 @@
         <script src="../javaScript/homeJS.js"></script>
         <script src="../javaScript/categoriesButton.js"></script>
         <script src="../javaScript/cartCategories.js"></script>
-        <script src="../javaScript/goToProductPage.js"></script>
+<!--        <script src="../javaScript/goToProductPage.js"></script>-->
 
     </head>
 </head>
@@ -34,6 +34,14 @@
     }
 
 </style>
+<script>
+
+    function goToProductPage()
+    {
+        window.location.href = "product.html";
+
+    }
+</script>
 <body>
 
 <section id="headerSc">
@@ -68,7 +76,7 @@
 
     <div class="btn-group">
         <h1>الاقسام</h1>
-        <button id="hoodiesActive" class="activeSec" onclick="loadContent('hoodies')">
+        <button id="hoodiesActive" class="noActiveSec" onclick="loadContent('hoodies')">
             <h3>قسم الملابس</h3>
         </button>
         <button id="mugsActive" class="noActiveSec" onclick="loadContent('mugs')">
@@ -257,6 +265,8 @@
             })
             .catch(error => console.error('Error:', error));
     }
+
+
 </script>
 
 </body>
