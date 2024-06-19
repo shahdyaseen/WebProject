@@ -7,7 +7,13 @@ body{
 
 }
 
+#cartButton{
+    background: #ffffff;
+    font-family: "Tajawal", sans-serif;
+    color: #653bb7;
+    justify-content: center;
 
+}
 #cart-container {
     margin: 20px auto;
     width: 300px;
@@ -45,65 +51,61 @@ body{
         text-align: center;
     }
 
-    .noActiveSec  {
+    /*.noActiveSec  {*/
 
 
 
-            font-family: "Tajawal", sans-serif;
-            background-color: #653bb7;
-            border: 3px solid white;
-            border-radius: 25px;
-            color: white;
-            /*padding: 20px 24px;*/
-            margin: 25px;
-            cursor: pointer;
-            width: 75%;
-            display: flex;
-            flex-direction: row;
-
-
-
-
-
-        :not(:last-child) {
-            border-bottom: none; /* Prevent double borders */
-        }
-
-        /* Add a background color on hover */
-
-        :hover {
-            transition: 0.5s ease-in-out;
-            background: #FFFFFF;
-            color: #653bb7;
-            border: 3px solid #653bb7;
-            border-radius: 15px;
-            transform: translateY(-7px);
-
-        }
-    }
-
-    .activeSec {
-
-        font-family: "Tajawal", sans-serif;
-
-        background-color: #FFF;
-        border: 3px solid #653bb7;
-        border-radius: 25px;
-        color: #653bb7;
-        /*padding: 20px 24px;*/
-        margin: 25px;
-        cursor: pointer;
-
-        width: 75%;
-        display: flex;
-        flex-direction: row;
-        transition: 0.5s ease-in-out;
+    /*        font-family: "Tajawal", sans-serif;*/
+    /*        background-color: #653bb7;*/
+    /*        border: 3px solid white;*/
+    /*        border-radius: 25px;*/
+    /*        color: white;*/
+    /*        !*padding: 20px 24px;*!*/
+    /*        margin: 25px;*/
+    /*        cursor: pointer;*/
+    /*        width: 75%;*/
+    /*        display: flex;*/
+    /*        flex-direction: row;*/
 
 
 
 
 
-    }
+    /*    :not(:last-child) {*/
+    /*        border-bottom: none; !* Prevent double borders *!*/
+    /*    }*/
+
+    /*    !* Add a background color on hover *!*/
+
+    /*    :hover {*/
+    /*        transition: 0.5s ease-in-out;*/
+    /*        background: #FFFFFF;*/
+    /*        color: #653bb7;*/
+    /*        border: 3px solid #653bb7;*/
+    /*        border-radius: 15px;*/
+    /*        transform: translateY(-7px);*/
+
+    /*    }*/
+    /*}*/
+
+    /*.activeSec {*/
+
+    /*    font-family: "Tajawal", sans-serif;*/
+
+    /*    background-color: #FFF;*/
+    /*    border: 3px solid #653bb7;*/
+    /*    border-radius: 25px;*/
+    /*    color: #653bb7;*/
+    /*    !*padding: 20px 24px;*!*/
+    /*    margin: 25px;*/
+    /*    cursor: pointer;*/
+
+    /*    width: 75%;*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*    transition: 0.5s ease-in-out;*/
+    /*    */
+    /*}*/
 
 }
 

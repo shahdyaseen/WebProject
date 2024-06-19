@@ -24,7 +24,7 @@
             <div class="liContainer">
                 <li><a class="" href="contactus.html">تواصل معنا</a></li>
                 <li><a class="" href="aboutUs.html">قصتنا</a></li>
-                <li> <a class="" href="categories.html">منتجاتنا</a></li>
+                <li> <a class="" href="../phpShahd/userPanel.php">منتجاتنا</a></li>
                 <li> <a class="active" href="home.html">الرئيسية</a></li>
             </div>
 
@@ -47,7 +47,7 @@
                     <br><br>
                     اشعر بقوة ملابسك!
                 </h1>
-                <button class="goToShopping" >تسوق الآن</button>
+                <button onclick="goToCategories()" class="goToShopping" >تسوق الآن</button>
             </div>
 
             <div class="wrapperImgHome" >
@@ -212,6 +212,10 @@
         img1.classList.add('active'); // Show the first image on load
         setInterval(change, 3000); // Change image every 3 seconds
     };
+
+    function goToCategories(){
+        window.location.href = '../phpShahd/userPanel.php';
+    }
 </script>
 
 

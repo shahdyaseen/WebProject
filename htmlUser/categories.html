@@ -29,7 +29,7 @@
             <div class="liContainer">
                 <li><a class="" href="contactus.html">تواصل معنا</a></li>
                 <li><a class="" href="aboutUs.html">قصتنا</a></li>
-                <li> <a class="active" href="categories.html">منتجاتنا</a></li>
+                <li> <a class="" href="../phpShahd/userPanel.php">منتجاتنا</a></li>
                 <li> <a class="" href="home.html">الرئيسية</a></li>
             </div>
 
@@ -45,7 +45,7 @@
 
 <div class="searchContainer">
     <input type="text" id="searchInput" placeholder="ابحث عن المنتجات..." oninput="filterProducts()">
-    <button id="shoppingCart"><img src="../icons/shoppingCart.png"></button>
+    <button onclick="goToCartShopping()" id="shoppingCart"><img src="../icons/shoppingCart.png"></button>
 </div>
 
 
@@ -643,7 +643,11 @@
 
     </footer>
 </section>
-
+<script>
+    function goToCartShopping(){
+        window.location.href='../phpShahd/cart.php';
+    }
+</script>
 
 </body>
 </html>

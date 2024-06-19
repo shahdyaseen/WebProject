@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/homeStyle.css">
-    <link rel="stylesheet" href="../Css/cart.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="icon" href="../icons/logo.png">
     <script src="../javaScript/homeJS.js"></script>
 
@@ -23,6 +23,7 @@ $myname=$_SESSION['user'];
 //echo "<a href='../htmlUser/home.html'>الرجوع</a><hr>";
 ?>
 <body>
+
 <section id="headerSc">
     <div id="mainMenu">
 
@@ -43,6 +44,10 @@ $myname=$_SESSION['user'];
 
     </div>
 </section>
+
+
+
+
 
 
 <form class="containerOrder" method="post" action="../phpMotasem/cart.php">
@@ -178,7 +183,7 @@ values($UID,$ID,'$location','$phone',1,1,'$date',1,0);";
     mysqli_query($c,$q7);
     echo "<script>
 window.alert('purchased');
-window.location.href='../phpShahd/userPanel.php';
+window.location.href='userPanel.php';
 </script>";
     }
 }
@@ -190,32 +195,8 @@ window.location.href='../phpShahd/userPanel.php';
    </div>
 </form>
 
-<div>
-    <section id="footerSc">
-        <footer class="footerContents">
 
-            <div class="footerContainer">
-                <div id="footerSocial">
-                    <h3 dir="rtl">تواصل معنا</h3>
-                    <ul class="imgSocial">
-                        <li><a href="https://www.instagram.com/7akora.store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <img src="../icons/instagram.PNG" width="25px"></a></li>
-                        <li><a href="https://www.facebook.com/7akora.store1?mibextid=LQQJ4d" target="_blank"><img src="../icons/facebook.PNG" width="25px"></a></li>
-                        <li><a href="https://wa.me/message/2KD7SQG2J7P6M1" target="_blank"> <img src="../icons/whatsapp.PNG" width="25px"></a></li>
 
-                    </ul>
-                </div>
-                <hr>
-                <div id="copyright">
-
-                    حَاكُورَة ٢٠٢٤ ©
-
-                </div>
-
-            </div>
-
-        </footer>
-    </section>
-</div>
 
 </body>
 
